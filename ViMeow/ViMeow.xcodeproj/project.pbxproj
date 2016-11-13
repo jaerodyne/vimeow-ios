@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */; };
 		A58550331DD83472006A7210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550321DD83472006A7210 /* AppDelegate.swift */; };
 		A58550351DD83472006A7210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550341DD83472006A7210 /* ViewController.swift */; };
 		A58550381DD83472006A7210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58550361DD83472006A7210 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViMeow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A585502F1DD83472006A7210 /* ViMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58550321DD83472006A7210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58550341DD83472006A7210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		A58550391DD83472006A7210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A585503C1DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A585503E1DD83472006A7210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
+		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64AFF79EA09A6A4153649CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72709DFE935546074DA93F74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */,
+				F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A58550261DD83471006A7210 = {
 			isa = PBXGroup;
 			children = (
 				A58550311DD83472006A7210 /* ViMeow */,
 				A58550301DD83472006A7210 /* Products */,
+				72709DFE935546074DA93F74 /* Pods */,
+				64AFF79EA09A6A4153649CD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58550411DD83472006A7210 /* Build configuration list for PBXNativeTarget "ViMeow" */;
 			buildPhases = (
+				BBE3A2036274D028257D3E8F /* [CP] Check Pods Manifest.lock */,
 				A585502B1DD83471006A7210 /* Sources */,
 				A585502C1DD83471006A7210 /* Frameworks */,
 				A585502D1DD83471006A7210 /* Resources */,
+				407511ADFBECC2660379B2DE /* [CP] Embed Pods Frameworks */,
+				9BB1394A4BF0499849F4BB2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		407511ADFBECC2660379B2DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB1394A4BF0499849F4BB2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE3A2036274D028257D3E8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A585502B1DD83471006A7210 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		A58550421DD83472006A7210 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -273,6 +349,7 @@
 		};
 		A58550431DD83472006A7210 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
