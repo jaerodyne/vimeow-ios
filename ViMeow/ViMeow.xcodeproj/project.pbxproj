@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */; };
 		A58550331DD83472006A7210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550321DD83472006A7210 /* AppDelegate.swift */; };
-		A58550351DD83472006A7210 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550341DD83472006A7210 /* ViewController.swift */; };
+		A58550351DD83472006A7210 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550341DD83472006A7210 /* MainVC.swift */; };
 		A58550381DD83472006A7210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58550361DD83472006A7210 /* Main.storyboard */; };
 		A585503A1DD83472006A7210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58550391DD83472006A7210 /* Assets.xcassets */; };
 		A585503D1DD83472006A7210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A585503B1DD83472006A7210 /* LaunchScreen.storyboard */; };
+		A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */; };
+		A5F3BE2A1DD83C9A0079B9FD /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViMeow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A585502F1DD83472006A7210 /* ViMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58550321DD83472006A7210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A58550341DD83472006A7210 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A58550341DD83472006A7210 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A58550371DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A58550391DD83472006A7210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A585503C1DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A585503E1DD83472006A7210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlaylistVC.swift; sourceTree = "<group>"; };
+		A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
 		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				A58550321DD83472006A7210 /* AppDelegate.swift */,
-				A58550341DD83472006A7210 /* ViewController.swift */,
+				A58550341DD83472006A7210 /* MainVC.swift */,
+				A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */,
+				A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */,
 				A58550361DD83472006A7210 /* Main.storyboard */,
 				A58550391DD83472006A7210 /* Assets.xcassets */,
 				A585503B1DD83472006A7210 /* LaunchScreen.storyboard */,
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A58550351DD83472006A7210 /* ViewController.swift in Sources */,
+				A5F3BE2A1DD83C9A0079B9FD /* VideoVC.swift in Sources */,
+				A58550351DD83472006A7210 /* MainVC.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
+				A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +389,7 @@
 				A58550431DD83472006A7210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  ViMeow
 //
 //  Created by Jillian Somera on 11/12/16.
@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
