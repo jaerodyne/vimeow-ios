@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="62" y="139"/>
         </scene>
-        <!--Video PlaylistVC-->
+        <!--VideoPlaylistVC-->
         <scene sceneID="0ip-dv-KMh">
             <objects>
-                <viewController id="Lcv-Ig-dXX" customClass="VideoPlaylistVC" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lcv-Ig-dXX" userLabel="VideoPlaylistVC" customClass="VideoPlaylistVC" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f6w-uy-kOv"/>
                         <viewControllerLayoutGuide type="bottom" id="d1T-l3-oTd"/>
@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rbd-30-tey" id="eH9-LH-A7S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3u-pd-zyk">

@@ -50,4 +50,12 @@ class VideoPlaylistVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         performSegue(withIdentifier: "VideoVC", sender: video)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoVC {
+            if let video = sender as? Video {
+                destination.video = video
+            }
+        }
+    }
 }
