@@ -15,6 +15,8 @@
 		A585503D1DD83472006A7210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A585503B1DD83472006A7210 /* LaunchScreen.storyboard */; };
 		A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */; };
 		A5F3BE2A1DD83C9A0079B9FD /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */; };
+		A5F3BE2C1DD842400079B9FD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE2B1DD842400079B9FD /* Video.swift */; };
+		A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A585503E1DD83472006A7210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlaylistVC.swift; sourceTree = "<group>"; };
 		A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
+		A5F3BE2B1DD842400079B9FD /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
 		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,11 +89,13 @@
 				A58550321DD83472006A7210 /* AppDelegate.swift */,
 				A58550341DD83472006A7210 /* MainVC.swift */,
 				A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */,
+				A5F3BE2B1DD842400079B9FD /* Video.swift */,
 				A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */,
 				A58550361DD83472006A7210 /* Main.storyboard */,
 				A58550391DD83472006A7210 /* Assets.xcassets */,
 				A585503B1DD83472006A7210 /* LaunchScreen.storyboard */,
 				A585503E1DD83472006A7210 /* Info.plist */,
+				A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */,
 			);
 			path = ViMeow;
 			sourceTree = "<group>";
@@ -222,6 +228,8 @@
 				A58550351DD83472006A7210 /* MainVC.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
 				A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */,
+				A5F3BE2C1DD842400079B9FD /* Video.swift in Sources */,
+				A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
