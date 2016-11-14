@@ -83,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9RQ-pu-Xwz" id="jDd-IW-air"/>
+                        <segue destination="Apn-Sl-Ybf" kind="showDetail" identifier="VideoVC" id="9jt-XD-Rez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vut-7e-2WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
