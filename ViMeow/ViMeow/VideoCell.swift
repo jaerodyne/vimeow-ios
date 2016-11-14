@@ -33,7 +33,7 @@ class VideoCell: UITableViewCell {
                 }
             } catch {
                 //                handle the error
-                //                print("Wrong URL")
+                                print("Wrong URL")
             }
         }
         
