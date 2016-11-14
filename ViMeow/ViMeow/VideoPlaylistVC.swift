@@ -26,14 +26,14 @@ class VideoPlaylistVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as? Video {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as? VideoCell {
             
             //            grabs object in the array
             let video = videos[indexPath.row]
             
             cell.updateUI(video: video)
             
-            return video
+            return cell
             
         } else {
             return UITableViewCell()
