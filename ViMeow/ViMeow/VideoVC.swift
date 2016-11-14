@@ -10,10 +10,22 @@ import UIKit
 
 class VideoVC: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
+    private var _video: Video!
+    
+    var video: Video {
+        get {
+            return _video
+        } set {
+            _video = newValue
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        webView.loadHTMLString(video.videoURL, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
