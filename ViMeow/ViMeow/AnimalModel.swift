@@ -14,7 +14,7 @@ protocol SearchModelDelegate {
     func dataAreReady()
 }
 
-class SearchModel: NSObject {
+class AnimalModel: NSObject {
     
     private var channelId: String = "UCBJycsmduvYEL83R_U4JriQ"
     private var API_KEY = "AIzaSyAJ7h6mfpzCkaomGO3BTevEgPXCcRtzwJ0"
@@ -23,7 +23,7 @@ class SearchModel: NSObject {
     var animalVideos = [Animal]()
     var delegate: SearchModelDelegate!
     
-    func getVideos(index: Int, searchText: String) {
+    func getVideos(searchText: String) {
         
         Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "5"], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
