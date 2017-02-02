@@ -16,7 +16,6 @@
 		A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BBA1E42D26A00195597 /* AnimalModel.swift */; };
 		A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BBE1E42D33D00195597 /* Animal.swift */; };
 		A5C89BC41E42DB0D00195597 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BC31E42DB0D00195597 /* VideoTableViewCell.swift */; };
-		A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		A5C89BBA1E42D26A00195597 /* AnimalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		A5C89BBE1E42D33D00195597 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		A5C89BC31E42DB0D00195597 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
-		A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
 		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +91,6 @@
 				A58550391DD83472006A7210 /* Assets.xcassets */,
 				A585503B1DD83472006A7210 /* LaunchScreen.storyboard */,
 				A585503E1DD83472006A7210 /* Info.plist */,
-				A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */,
 			);
 			path = ViMeow;
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 			files = (
 				A5C89BB81E42CD8A00195597 /* AnimalsPlaylistTableViewController.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
-				A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */,
 				A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */,
 				A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */,
 				A5C89BC41E42DB0D00195597 /* VideoTableViewCell.swift in Sources */,

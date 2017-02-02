@@ -11,7 +11,7 @@ import Alamofire
 
 //lets LastVideosVC know that all videos have been collected in the array and are ready
 protocol SearchModelDelegate {
-    func getVideos()
+    func dataAreReady()
 }
 
 class AnimalModel: NSObject {
@@ -56,7 +56,7 @@ class AnimalModel: NSObject {
                 
                 self.animalVideos = videosResult
                 if self.delegate != nil {
-                    self.delegate.getVideos()
+                    self.delegate.dataAreReady()
                 }
             }
         }

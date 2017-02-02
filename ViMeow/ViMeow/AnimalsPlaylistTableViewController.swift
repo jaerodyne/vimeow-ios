@@ -8,10 +8,11 @@
 
 import UIKit
 
-class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate {
+class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate {
     
     var videosArray = [Animal]()
     var model = AnimalModel()
+    var searchController: UISearchController!
     var searchText: String = "Cats"
     
     override func viewDidLoad() {
@@ -69,13 +70,14 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             task.resume()
             return cell
         }
-    }
+    
     
     func dataAreReady() {
-        self.videosArray = model.videosArray
+        self.videosArray = model.animalVideos
         self.tableView.reloadData()
     }
 
+}
 
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if segmentedControl.selectedSegmentIndex == 1 {
@@ -103,5 +105,5 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
 //        }
 //    }
 //    
-}
+
 
