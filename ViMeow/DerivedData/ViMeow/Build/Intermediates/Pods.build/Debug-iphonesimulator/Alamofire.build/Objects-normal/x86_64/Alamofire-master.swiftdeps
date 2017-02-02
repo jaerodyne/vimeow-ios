@@ -1,0 +1,21 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "0bb188dbbf0e33a49e344e9376e4fb51"
+build_time: [539315184, 389549000]
+inputs:
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/AFError.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Alamofire.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/MultipartFormData.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Notifications.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/ParameterEncoding.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Request.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Response.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/ResponseSerialization.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Result.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/ServerTrustPolicy.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/SessionDelegate.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/SessionManager.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/TaskDelegate.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Timeline.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/Pods/Alamofire/Source/Validation.swift": [532333016, 0]

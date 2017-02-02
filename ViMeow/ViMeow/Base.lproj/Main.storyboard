@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lcv-Ig-dXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IpZ-uj-Pb2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,103 +9,134 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Cats-->
+        <scene sceneID="H9u-1R-XoA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cats" image="Cat_1f1f1f_25" id="sYA-WE-hHY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz6-YV-3fX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eUV-ei-I5F" kind="relationship" relationship="rootViewController" id="0d0-ih-m7Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Il-pd-df9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="139"/>
+            <point key="canvasLocation" x="2144.8000000000002" y="1538.6806596701651"/>
         </scene>
-        <!--Video PlaylistVC-->
-        <scene sceneID="0ip-dv-KMh">
+        <!--Tab Bar Controller-->
+        <scene sceneID="2aI-7i-YPn">
             <objects>
-                <viewController id="Lcv-Ig-dXX" customClass="VideoPlaylistVC" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f6w-uy-kOv"/>
-                        <viewControllerLayoutGuide type="bottom" id="d1T-l3-oTd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3aP-Rg-wvh">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="D7X-xh-kaS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="m8g-2y-3OV" kind="relationship" relationship="viewControllers" id="Kqc-Og-zCx"/>
+                        <segue destination="bhX-NN-TFm" kind="relationship" relationship="viewControllers" id="bLG-n4-Dk8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koc-Lc-aFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205.5999999999999" y="1538.6806596701651"/>
+        </scene>
+        <!--Dogs-->
+        <scene sceneID="xbg-vT-FJb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bhX-NN-TFm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dogs" image="Dog_1f1f1f_25" id="hob-bd-u6d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zkR-OF-RER">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eUV-ei-I5F" kind="relationship" relationship="rootViewController" id="AmS-l9-HxK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlp-uf-GnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="2293"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="WLW-dN-bzb">
+            <objects>
+                <tableViewController id="eUV-ei-I5F" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="205" sectionHeaderHeight="18" sectionFooterHeight="18" id="AoN-5o-MDU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9RQ-pu-Xwz">
-                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="116" id="Rbd-30-tey" customClass="VideoCell" customModule="ViMeow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rbd-30-tey" id="eH9-LH-A7S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="lastVideosCell" rowHeight="205" id="1vN-rN-le7" customClass="LastVideosTableViewCell" customModule="ViMeow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="205"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vN-rN-le7" id="Dvg-Yy-cLd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-BX-Dh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-vb-5kc">
+                                            <rect key="frame" x="0.0" y="154" width="375" height="50"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3u-pd-zyk">
-                                                    <rect key="frame" x="156" y="47" width="42" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-7O-Eod">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuB-6U-hLu">
-                                                    <rect key="frame" x="16" y="8" width="108" height="99"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="videoPreviewImage" destination="wuB-6U-hLu" id="I8C-Pm-nmY"/>
-                                            <outlet property="videoTitle" destination="o3u-pd-zyk" id="866-rP-88N"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animals Animals Animals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3d-nG-kRa">
-                                <rect key="frame" x="61" y="51" width="252" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="9RQ-pu-Xwz" id="jDd-IW-air"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vut-7e-2WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CYD-7O-Eod" secondAttribute="trailing" constant="8" id="63b-ul-wH0"/>
+                                                <constraint firstAttribute="height" constant="50" id="ahk-Fa-lq5"/>
+                                                <constraint firstItem="CYD-7O-Eod" firstAttribute="leading" secondItem="TOe-vb-5kc" secondAttribute="leading" constant="8" id="cX7-9u-Fq3"/>
+                                                <constraint firstAttribute="bottom" secondItem="CYD-7O-Eod" secondAttribute="bottom" id="nJh-zJ-Q70"/>
+                                                <constraint firstItem="CYD-7O-Eod" firstAttribute="top" secondItem="TOe-vb-5kc" secondAttribute="top" id="v0L-vP-WtH"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uHt-BX-Dh3" firstAttribute="leading" secondItem="Dvg-Yy-cLd" secondAttribute="leading" id="1Bt-A0-rRR"/>
+                                        <constraint firstItem="uHt-BX-Dh3" firstAttribute="top" secondItem="Dvg-Yy-cLd" secondAttribute="top" id="8TE-Ic-vO4"/>
+                                        <constraint firstAttribute="trailing" secondItem="uHt-BX-Dh3" secondAttribute="trailing" id="8yo-Ks-DuK"/>
+                                        <constraint firstAttribute="bottom" secondItem="TOe-vb-5kc" secondAttribute="bottom" id="LBd-cC-dKA"/>
+                                        <constraint firstAttribute="trailing" secondItem="TOe-vb-5kc" secondAttribute="trailing" id="bT3-vc-Qr8"/>
+                                        <constraint firstItem="TOe-vb-5kc" firstAttribute="leading" secondItem="Dvg-Yy-cLd" secondAttribute="leading" id="pq7-HG-srb"/>
+                                        <constraint firstAttribute="bottom" secondItem="uHt-BX-Dh3" secondAttribute="bottom" id="ydf-R9-sUI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="videoThumbnailImageView" destination="uHt-BX-Dh3" id="c86-Fa-wg4"/>
+                                    <outlet property="videoTitle" destination="CYD-7O-Eod" id="wLc-S5-4qh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eUV-ei-I5F" id="Aiq-cI-95T"/>
+                            <outlet property="delegate" destination="eUV-ei-I5F" id="dDE-Ai-D4S"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xcG-ZT-rCR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XS-0L-R6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861.60000000000002" y="138.98050974512745"/>
-        </scene>
-        <!--VideoVC-->
-        <scene sceneID="EcY-yE-ulg">
-            <objects>
-                <viewController id="Apn-Sl-Ybf" customClass="VideoVC" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L0s-FS-XQF"/>
-                        <viewControllerLayoutGuide type="bottom" id="vxV-yG-avd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zil-UQ-ZrH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oJC-hY-AgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1622" y="139"/>
+            <point key="canvasLocation" x="3110" y="1539"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cat_1f1f1f_25" width="25" height="25"/>
+        <image name="Dog_1f1f1f_25" width="25" height="25"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AmS-l9-HxK"/>
+    </inferredMetricsTieBreakers>
 </document>

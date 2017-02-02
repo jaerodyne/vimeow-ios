@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "c38e993024d0af2c84f5246e5748412d"
+build_time: [539318335, 222189000]
+inputs:
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/ViMeow/CatsPlaylistTableViewController.swift": [539318041, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/ViMeow/AppDelegate.swift": [532333016, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/ViMeow/VideoCell.swift": !dirty [539315276, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/ViMeow/AnimalModel.swift": !dirty [539318334, 0]
+  "/Users/Shenanigans/Documents/portfolio-websites/vimeow/ViMeow/ViMeow/Animal.swift": [9223372036854775807, 0]
