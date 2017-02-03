@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="2144.8000000000002" y="1538.6806596701651"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar View Controller-->
         <scene sceneID="2aI-7i-YPn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" customClass="CustomTabBarViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D7X-xh-kaS">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -41,6 +41,7 @@
                     <connections>
                         <segue destination="m8g-2y-3OV" kind="relationship" relationship="viewControllers" id="Kqc-Og-zCx"/>
                         <segue destination="bhX-NN-TFm" kind="relationship" relationship="viewControllers" id="bLG-n4-Dk8"/>
+                        <segue destination="29I-we-QoH" kind="relationship" relationship="viewControllers" id="1vv-XG-aGY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koc-Lc-aFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,12 +184,29 @@
             </objects>
             <point key="canvasLocation" x="3937" y="1539"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="Kan-RG-Icj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29I-we-QoH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Hearts_4290ff_25" id="EZH-Gh-PKu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIi-88-Kvu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ced-f2-sab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="3019"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cat_1f1f1f_25" width="25" height="25"/>
         <image name="Dog_1f1f1f_25" width="25" height="25"/>
+        <image name="Hearts_4290ff_25" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AmS-l9-HxK"/>
+        <segue reference="0d0-ih-m7Z"/>
     </inferredMetricsTieBreakers>
 </document>
