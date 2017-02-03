@@ -13,7 +13,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
-    var searchText: String = "Cats"
+    var searchText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,8 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         model.getVideos(searchText: searchText)
         
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

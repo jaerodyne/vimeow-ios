@@ -8,10 +8,12 @@
 
 import UIKit
 
-class CustomTabBarViewController: UITabBarController {
-
+class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.delegate = self
 
         if let items = self.tabBar.items {
             
@@ -50,20 +52,17 @@ class CustomTabBarViewController: UITabBarController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tabBarController(_ tabBarController: UITabBarController,
+                          didSelect viewController: UIViewController){
+        if tabBarController.selectedIndex == 0 {
+            
+            print("We're number 0!")
+        } else if tabBarController.selectedIndex == 1 {
+            print("We're number 1!")
+        } else {
+            print("We're whatever number you want us to be!")
+        }
+//        print("We selected something")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
