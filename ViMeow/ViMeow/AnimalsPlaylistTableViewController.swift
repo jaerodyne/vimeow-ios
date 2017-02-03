@@ -10,6 +10,8 @@ import UIKit
 
 class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate {
     
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!

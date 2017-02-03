@@ -13,7 +13,7 @@
         <!--Cats-->
         <scene sceneID="H9u-1R-XoA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cats" image="Cat_1f1f1f_25" id="sYA-WE-hHY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz6-YV-3fX">
@@ -21,6 +21,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LoZ-Og-SUb">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="eUV-ei-I5F" kind="relationship" relationship="rootViewController" id="0d0-ih-m7Z"/>
                     </connections>
@@ -78,7 +82,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="205" id="1vN-rN-le7" userLabel="videoCell" customClass="VideoTableViewCell" customModule="ViMeow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="205"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="205"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vN-rN-le7" id="Dvg-Yy-cLd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="204.5"/>
@@ -128,11 +132,14 @@
                             <outlet property="delegate" destination="eUV-ei-I5F" id="dDE-Ai-D4S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xcG-ZT-rCR"/>
+                    <navigationItem key="navigationItem" id="xcG-ZT-rCR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QVJ-2h-u1j"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="m0R-9q-2HK">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
+                        <outlet property="refreshButton" destination="QVJ-2h-u1j" id="xOg-HD-HUO"/>
                         <segue destination="Mwx-5U-zF0" kind="show" identifier="showVideo" id="bUE-Bg-4Ti"/>
                     </connections>
                 </tableViewController>
