@@ -10,6 +10,9 @@ import UIKit
 
 class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
+//    let animal = AnimalModel()
+//    var searchText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,17 +55,19 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
         }
     }
 
-    func tabBarController(_ tabBarController: UITabBarController,
-                          didSelect viewController: UIViewController){
-        if tabBarController.selectedIndex == 0 {
-            
-            print("We're number 0!")
-        } else if tabBarController.selectedIndex == 1 {
-            print("We're number 1!")
-        } else {
-            print("We're whatever number you want us to be!")
-        }
+//    func tabBarController(_ tabBarController: UITabBarController,
+//                          didSelect viewController: UIViewController){
+    
+//        if tabBarController.selectedIndex == 0 {
+//            animal.getVideos(searchText: "Cats")
+//            print("We're number 0!")
+//        } else if tabBarController.selectedIndex == 1 {
+//            animal.getVideos(searchText: "Dogs")
+//            print("We're number 1!")
+//        } else {
+//            print("We're whatever number you want us to be!")
+//        }
 //        print("We selected something")
-    }
+//    }
 
 }

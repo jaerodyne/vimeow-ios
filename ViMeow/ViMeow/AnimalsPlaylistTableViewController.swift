@@ -13,14 +13,18 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
-    var searchText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         model.delegate = self
-        model.getVideos(searchText: searchText)
-        
+
+        let tbc = tabBarController as! CustomTabBarViewController
+        if tbc.selectedIndex == 0 {
+            model.getVideos(searchText: "Cats")
+        } else if tbc.selectedIndex == 1 {
+            model.getVideos(searchText: "Dogs")
+        }
     }
     
     
