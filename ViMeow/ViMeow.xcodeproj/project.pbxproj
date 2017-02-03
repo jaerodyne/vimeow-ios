@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */; };
+		A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */; };
 		A58550331DD83472006A7210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550321DD83472006A7210 /* AppDelegate.swift */; };
 		A58550381DD83472006A7210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58550361DD83472006A7210 /* Main.storyboard */; };
 		A585503A1DD83472006A7210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58550391DD83472006A7210 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViMeow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalVideoTableViewController.swift; sourceTree = "<group>"; };
 		A585502F1DD83472006A7210 /* ViMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58550321DD83472006A7210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58550371DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				A5C89BC21E42DAEB00195597 /* Cells */,
 				A5C89BB71E42CD8A00195597 /* AnimalsPlaylistTableViewController.swift */,
+				A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C89BB81E42CD8A00195597 /* AnimalsPlaylistTableViewController.swift in Sources */,
+				A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
 				A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */,
 				A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */,

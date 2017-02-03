@@ -23,25 +23,6 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
     }
     
-//    @IBAction func searchAction(_ sender: Any) {
-//        searchController = UISearchController(searchResultsController: nil)
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.searchBar.delegate = self
-//        searchController.searchBar.text = searchText
-//        searchController.searchBar.isTranslucent = false
-//        searchController.searchBar.barTintColor = UIColor(red: 50/255.5, green: 60/255.5, blue: 72/255.5, alpha: 1.0)
-//        self.present(searchController, animated: true, completion: nil)
-//    }
-//    
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchController.resignFirstResponder()
-//        searchController.dismiss(animated: true, completion: nil)
-//        searchText = searchBar.text!
-//        
-//        segmentedAction()
-//    }
-//    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return videosArray.count
@@ -76,34 +57,18 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         self.videosArray = model.animalVideos
         self.tableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showVideo", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVideo" {
+            let vc = segue.destination as! AnimalVideoTableViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            vc.vidId = videosArray[indexPath.row].id
+        }
+    }
 
 }
-
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if segmentedControl.selectedSegmentIndex == 1 {
-//            performSegue(withIdentifier: "showVideo2", sender: self)
-//        } else if segmentedControl.selectedSegmentIndex == 0 {
-//            performSegue(withIdentifier: "showPlaylistForChannel", sender: self)
-//        }
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segmentedControl.selectedSegmentIndex == 1 {
-//            if segue.identifier == "showVideo2" {
-//                let vc = segue.destination as! VideoDetailsTableViewController
-//                let indexPath = tableView.indexPathForSelectedRow!
-//                vc.vidId = videosArray[indexPath.row].id
-//                vc.vidTitle = videosArray[indexPath.row].title
-//                vc.vidDescription = videosArray[indexPath.row]._description
-//            }
-//        } else if segmentedControl.selectedSegmentIndex == 0 {
-//            if segue.identifier == "showPlaylistForChannel" {
-//                let vc = segue.destination as! ChannelVideosTableViewController
-//                let indexPath = tableView.indexPathForSelectedRow!
-//                vc.channelId = channelArray[indexPath.row].channelId
-//            }
-//        }
-//    }
-//    
-
 

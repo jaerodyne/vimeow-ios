@@ -82,7 +82,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="204.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-BX-Dh3">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-BX-Dh3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOe-vb-5kc">
@@ -127,10 +127,61 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xcG-ZT-rCR"/>
+                    <connections>
+                        <segue destination="Mwx-5U-zF0" kind="show" identifier="showVideo" id="bUE-Bg-4Ti"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XS-0L-R6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3110" y="1539"/>
+        </scene>
+        <!--Animal Video Table View Controller-->
+        <scene sceneID="MgV-rz-oYM">
+            <objects>
+                <tableViewController id="Mwx-5U-zF0" customClass="AnimalVideoTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WrS-gh-cFO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="NRh-zl-b5T">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="315" id="yRv-hV-dXU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRv-hV-dXU" id="tnR-0y-4qq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <webView contentMode="scaleToFill" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAX-1G-ix2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </webView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KAX-1G-ix2" firstAttribute="leading" secondItem="tnR-0y-4qq" secondAttribute="leading" id="6Fj-IC-02V"/>
+                                                <constraint firstAttribute="bottom" secondItem="KAX-1G-ix2" secondAttribute="bottom" id="6Kv-uO-hsj"/>
+                                                <constraint firstAttribute="trailing" secondItem="KAX-1G-ix2" secondAttribute="trailing" id="BuE-OT-tLF"/>
+                                                <constraint firstItem="KAX-1G-ix2" firstAttribute="top" secondItem="tnR-0y-4qq" secondAttribute="top" id="vaW-y1-rnR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Mwx-5U-zF0" id="5Kc-6v-MjO"/>
+                            <outlet property="delegate" destination="Mwx-5U-zF0" id="5ZU-4o-lId"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qVV-PC-too"/>
+                    <connections>
+                        <outlet property="webView" destination="KAX-1G-ix2" id="sNi-HT-RqK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4e-Te-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3937" y="1539"/>
         </scene>
     </scenes>
     <resources>
