@@ -16,14 +16,16 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cats" image="Cat_1f1f1f_25" id="sYA-WE-hHY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz6-YV-3fX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wz6-YV-3fX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2613784569354537" green="0.85977564100000003" blue="0.31278037415601179" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LoZ-Og-SUb">
                         <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.21986923716309853" green="0.72409855769230769" blue="0.26404274020134938" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="eUV-ei-I5F" kind="relationship" relationship="rootViewController" id="0d0-ih-m7Z"/>
@@ -38,12 +40,16 @@
             <objects>
                 <tabBarController title="Title" automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" customClass="CustomTabBarViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D7X-xh-kaS">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.26940025286405744" green="0.43643465490326189" blue="0.99858772754669189" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.92437900641025639" green="0.92437900641025639" blue="0.92437900641025639" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="m8g-2y-3OV" kind="relationship" relationship="viewControllers" id="Kqc-Og-zCx"/>
@@ -61,9 +67,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bhX-NN-TFm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dogs" image="Dog_1f1f1f_25" id="hob-bd-u6d"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zkR-OF-RER">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zkR-OF-RER">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -100,10 +107,10 @@
                                                     <rect key="frame" x="8" y="0.0" width="359" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="CYD-7O-Eod" secondAttribute="trailing" constant="8" id="63b-ul-wH0"/>
                                                 <constraint firstAttribute="height" constant="50" id="ahk-Fa-lq5"/>
@@ -159,7 +166,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRv-hV-dXU" id="tnR-0y-4qq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="602.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAX-1G-ix2">
@@ -200,9 +207,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29I-we-QoH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="Hearts_4290ff_25" id="EZH-Gh-PKu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIi-88-Kvu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MIi-88-Kvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
