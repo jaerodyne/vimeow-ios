@@ -22,10 +22,10 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
             model.getVideos(searchText: "Cats", token: nil)
-            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Cats")
+            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Cats Cats Cats")
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs", token: nil)
-            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs")
+            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs Dogs Dogs")
         }
     }
     //get rid of whitespace before and after tableview cells
@@ -85,15 +85,15 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         let titleLabel = UILabel(frame: CGRect(0, -2, 0, 0))
         
         titleLabel.backgroundColor = UIColor.clear
-        titleLabel.textColor = UIColor.black
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.textColor = UIColor.init(red: 56/255.0, green: 185/255.0, blue: 67/255.0, alpha: 255/255.0)
+        titleLabel.font = UIFont(name: "AvenirNextCondensed-Bold", size: 16)
         titleLabel.text = title
         titleLabel.sizeToFit()
         
         let subtitleLabel = UILabel(frame: CGRect(0, 18, 0, 0))
         subtitleLabel.backgroundColor = UIColor.clear
-        subtitleLabel.textColor = UIColor.black
-        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subtitleLabel.textColor = UIColor.init(red: 56/255.0, green: 185/255.0, blue: 67/255.0, alpha: 255/255.0)
+        subtitleLabel.font =  UIFont(name: "AvenirNextCondensed-Regular", size: 12)
         subtitleLabel.text = subtitle
         subtitleLabel.sizeToFit()
         

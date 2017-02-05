@@ -19,13 +19,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wz6-YV-3fX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.2613784569354537" green="0.85977564100000003" blue="0.31278037415601179" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LoZ-Og-SUb">
                         <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21986923716309853" green="0.72409855769230769" blue="0.26404274020134938" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2196078431372549" green="0.72549019607843135" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="eUV-ei-I5F" kind="relationship" relationship="rootViewController" id="0d0-ih-m7Z"/>
@@ -43,11 +43,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D7X-xh-kaS">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.26940025286405744" green="0.43643465490326189" blue="0.99858772754669189" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.92437900641025639" green="0.92437900641025639" blue="0.92437900641025639" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.1554887821" green="0.1554887821" blue="0.1554887821" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.19987886742934216" green="0.32846509909589755" blue="0.75416666666666665" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -70,7 +72,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zkR-OF-RER">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -107,10 +109,10 @@
                                                     <rect key="frame" x="8" y="0.0" width="359" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="CYD-7O-Eod" secondAttribute="trailing" constant="8" id="63b-ul-wH0"/>
                                                 <constraint firstAttribute="height" constant="50" id="ahk-Fa-lq5"/>
@@ -210,7 +212,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MIi-88-Kvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.2613784569" green="0.85977564100000003" blue="0.31278037419999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
@@ -225,6 +227,6 @@
         <image name="Hearts_4290ff_25" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AmS-l9-HxK"/>
+        <segue reference="0d0-ih-m7Z"/>
     </inferredMetricsTieBreakers>
 </document>
