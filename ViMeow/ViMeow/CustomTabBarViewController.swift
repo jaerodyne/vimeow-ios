@@ -56,8 +56,7 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // navigationItem.title = "One"
-        navigationItem.title = "Count: "
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "AvenirNextCondensed-Regular", size: 10)!], for: .normal)
     }
 
 //    func tabBarController(_ tabBarController: UITabBarController,

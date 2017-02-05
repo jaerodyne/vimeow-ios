@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //change nav bar color
 //        UINavigationBar.appearance().backgroundColor = UIColor.green
-        
+        UILabel.appearance().font = UIFont(name: "AvenirNextCondensed-Regular", size: 17.0)
         return true
     }
     

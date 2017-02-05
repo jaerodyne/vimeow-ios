@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cats-->
+        <!--CATS-->
         <scene sceneID="H9u-1R-XoA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cats" image="Cat_1f1f1f_25" id="sYA-WE-hHY"/>
+                    <tabBarItem key="tabBarItem" title="CATS" image="Cat_1f1f1f_25" id="sYA-WE-hHY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wz6-YV-3fX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -61,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="1205.5999999999999" y="1538.6806596701651"/>
         </scene>
-        <!--Dogs-->
+        <!--DOGS-->
         <scene sceneID="xbg-vT-FJb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bhX-NN-TFm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dogs" image="Dog_1f1f1f_25" id="hob-bd-u6d"/>
+                    <tabBarItem key="tabBarItem" title="DOGS" image="Dog_1f1f1f_25" id="hob-bd-u6d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zkR-OF-RER">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -201,11 +201,11 @@
             </objects>
             <point key="canvasLocation" x="3936.8000000000002" y="1538.6806596701651"/>
         </scene>
-        <!--Favorites-->
+        <!--FAVORITES-->
         <scene sceneID="Kan-RG-Icj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29I-we-QoH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="Hearts_4290ff_25" id="EZH-Gh-PKu"/>
+                    <tabBarItem key="tabBarItem" title="FAVORITES" image="Hearts_4290ff_25" id="EZH-Gh-PKu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MIi-88-Kvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -225,6 +225,6 @@
         <image name="Hearts_4290ff_25" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0d0-ih-m7Z"/>
+        <segue reference="AmS-l9-HxK"/>
     </inferredMetricsTieBreakers>
 </document>
