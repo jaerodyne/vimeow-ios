@@ -17,7 +17,7 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
         super.viewDidLoad()
         
         self.delegate = self
-
+        
         if let items = self.tabBar.items {
             
             //Get the height of the tab bar
@@ -53,6 +53,11 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
                 }
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // navigationItem.title = "One"
+        navigationItem.title = "Count: "
     }
 
 //    func tabBarController(_ tabBarController: UITabBarController,

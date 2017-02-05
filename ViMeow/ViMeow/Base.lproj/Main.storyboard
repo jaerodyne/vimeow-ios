@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="2144.8000000000002" y="1538.6806596701651"/>
         </scene>
-        <!--Custom Tab Bar View Controller-->
+        <!--Title-->
         <scene sceneID="2aI-7i-YPn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" customClass="CustomTabBarViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Title" automaticallyAdjustsScrollViewInsets="NO" id="IpZ-uj-Pb2" customClass="CustomTabBarViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="D7X-xh-kaS">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -82,7 +82,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="205" id="1vN-rN-le7" userLabel="videoCell" customClass="VideoTableViewCell" customModule="ViMeow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="205"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="205"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vN-rN-le7" id="Dvg-Yy-cLd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="204.5"/>
@@ -132,18 +132,23 @@
                             <outlet property="delegate" destination="eUV-ei-I5F" id="dDE-Ai-D4S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xcG-ZT-rCR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QVJ-2h-u1j"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="xcG-ZT-rCR"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="m0R-9q-2HK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
-                        <outlet property="refreshButton" destination="QVJ-2h-u1j" id="xOg-HD-HUO"/>
                         <segue destination="Mwx-5U-zF0" kind="show" identifier="showVideo" id="bUE-Bg-4Ti"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XS-0L-R6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="N61-u0-Vtb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="ViMeow" id="7M7-LJ-Wao"/>
+                    </items>
+                </navigationBar>
             </objects>
             <point key="canvasLocation" x="3110" y="1539"/>
         </scene>
@@ -163,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRv-hV-dXU" id="tnR-0y-4qq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="602.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAX-1G-ix2">

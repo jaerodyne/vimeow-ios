@@ -19,16 +19,19 @@ class AnimalModel: NSObject {
     private var channelId: String = "UCBJycsmduvYEL83R_U4JriQ"
     private var API_KEY = "AIzaSyAJ7h6mfpzCkaomGO3BTevEgPXCcRtzwJ0"
     private var url = "https://www.googleapis.com/youtube/v3/search"
+    private var nextPageToken = ""
     
     var animalVideos = [Animal]()
     var delegate: SearchModelDelegate!
     
-    func getVideos(searchText: String) {
+    func getVideos(searchText: String, token: String?) {
         
         Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "5"], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
             if let jsonResult = response.result.value as? NSDictionary  {
                 
+                self.nextPageToken = jsonResult["nextPageToken"] as! String
+                print("token \(self.nextPageToken)")
                 var videosResult = [Animal]()
                 
                 for video in jsonResult["items"] as! NSArray {
