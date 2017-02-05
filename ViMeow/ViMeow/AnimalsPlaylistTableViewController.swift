@@ -9,9 +9,7 @@
 import UIKit
 
 class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate {
-    
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
-    
+
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
@@ -29,6 +27,11 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             model.getVideos(searchText: "Dogs", token: nil)
             self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs")
         }
+    }
+    //get rid of whitespace before and after tableview cells
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +110,6 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             let newX = widthDiff / 2
             titleLabel.frame.origin.x = newX
         }
-
         return titleView
     }
 
