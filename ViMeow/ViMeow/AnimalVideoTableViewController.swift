@@ -12,8 +12,10 @@ class AnimalVideoTableViewController: UITableViewController {
     
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var videoTitleLabel: UILabel!
+    @IBOutlet weak var videoDescription: UITextView!
     
     var vidTitle: String!
+    var vidDescription: String!
     var vidId: String = ""
     
     override func viewDidLoad() {
@@ -25,6 +27,9 @@ class AnimalVideoTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         videoTitleLabel.text = vidTitle
+        videoDescription.text = vidDescription
+        
+        videoDescription.scrollRangeToVisible(NSRange(location: 0, length: 0))
         
         if let webView = webView {
             let bounds = UIScreen.main.bounds

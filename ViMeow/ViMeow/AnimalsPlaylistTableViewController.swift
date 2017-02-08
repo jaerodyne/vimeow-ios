@@ -56,6 +56,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
             
             cell.videoTitleLabel.text = videosArray[indexPath.row].title
+            cell.videoTitleLabel.text = videosArray[indexPath.row].title
             
             let urlString = videosArray[indexPath.row].thumbnailUrl
             let url = URL(string: urlString)
@@ -89,6 +90,8 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         if segue.identifier == "showVideo" {
             let vc = segue.destination as! AnimalVideoTableViewController
             let indexPath = tableView.indexPathForSelectedRow!
+            vc.vidTitle = videosArray[indexPath.row].title
+            vc.vidDescription = videosArray[indexPath.row]._description
             vc.vidId = videosArray[indexPath.row].id
         }
     }

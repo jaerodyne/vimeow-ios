@@ -30,8 +30,6 @@ class AnimalModel: NSObject {
             
             if let jsonResult = response.result.value as? NSDictionary  {
                 
-                print(jsonResult["nextPageToken"] as! String)
-                
                 self.nextPageToken = jsonResult["nextPageToken"] as! String
 
                 var videosResult = [Animal]()

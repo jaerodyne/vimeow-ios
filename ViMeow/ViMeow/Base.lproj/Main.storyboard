@@ -244,7 +244,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="02U-lZ-CHq" id="MWM-xY-vG8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="314.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-ax-bPh">
@@ -293,7 +293,7 @@
                                         <rect key="frame" x="0.0" y="446" width="375" height="243"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VI1-hL-eOw" id="Yi5-kp-jcR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="242"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="242.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="DESCRIPTION" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H4y-3e-2md">
@@ -328,7 +328,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDl-Hl-lg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3937" y="2193"/>
+            <point key="canvasLocation" x="3969" y="2172"/>
         </scene>
     </scenes>
     <resources>
