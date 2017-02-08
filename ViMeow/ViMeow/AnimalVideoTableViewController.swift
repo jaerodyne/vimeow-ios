@@ -11,16 +11,20 @@ import UIKit
 class AnimalVideoTableViewController: UITableViewController {
     
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var videoTitleLabel: UILabel!
     
+    var vidTitle: String!
     var vidId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.hidesBackButton = true
+       // navigationItem.hidesBackButton = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
+        videoTitleLabel.text = vidTitle
         
         if let webView = webView {
             let bounds = UIScreen.main.bounds
