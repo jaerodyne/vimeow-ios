@@ -24,14 +24,18 @@ class AnimalModel: NSObject {
     var animalVideos = [Animal]()
     var delegate: SearchModelDelegate!
     
-    func getVideos(searchText: String, token: String?) {
+    func getVideos(searchText: String) {
         
-        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "5"], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "5", "pageToken": nextPageToken], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
             if let jsonResult = response.result.value as? NSDictionary  {
                 
+                print(jsonResult["nextPageToken"] as! String)
+                
                 self.nextPageToken = jsonResult["nextPageToken"] as! String
-                print("token \(self.nextPageToken)")
+                
+//                self.nextPageToken = jsonResult["pageToken"] as! String
+//                print("token \(self.nextPageToken)")
                 var videosResult = [Animal]()
                 
                 for video in jsonResult["items"] as! NSArray {
@@ -60,6 +64,7 @@ class AnimalModel: NSObject {
                 self.animalVideos = videosResult
                 if self.delegate != nil {
                     self.delegate.dataAreReady()
+                    print(self.url)
                 }
             }
         }

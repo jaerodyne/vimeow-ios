@@ -14,6 +14,18 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var model = AnimalModel()
     var searchController: UISearchController!
     
+    @IBAction func refreshBtnPressed(_ sender: Any) {
+        let tbc = tabBarController as! CustomTabBarViewController
+        if tbc.selectedIndex == 0 {
+            model.getVideos(searchText: "Cats")
+            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Cats Cats Cats")
+        } else if tbc.selectedIndex == 1 {
+            model.getVideos(searchText: "Dogs")
+            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs Dogs Dogs")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,10 +33,10 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats", token: nil)
+            model.getVideos(searchText: "Cats")
             self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Cats Cats Cats")
         } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs", token: nil)
+            model.getVideos(searchText: "Dogs")
             self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs Dogs Dogs")
         }
     }
