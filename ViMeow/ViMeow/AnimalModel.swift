@@ -62,7 +62,6 @@ class AnimalModel: NSObject {
                 self.animalVideos = videosResult
                 if self.delegate != nil {
                     self.delegate.dataAreReady()
-                    print(self.url)
                 }
             }
         }

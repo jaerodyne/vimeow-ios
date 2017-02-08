@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().backgroundColor = UIColor.black
-        UILabel.appearance().font = UIFont(name: "AvenirNext-Italic", size: 14.0)
+        UILabel.appearance().font = UIFont(name: "AvenirNext-BoldItalic", size: 14.0)
         return true
     }
     
