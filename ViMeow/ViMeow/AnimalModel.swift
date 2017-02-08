@@ -33,9 +33,7 @@ class AnimalModel: NSObject {
                 print(jsonResult["nextPageToken"] as! String)
                 
                 self.nextPageToken = jsonResult["nextPageToken"] as! String
-                
-//                self.nextPageToken = jsonResult["pageToken"] as! String
-//                print("token \(self.nextPageToken)")
+
                 var videosResult = [Animal]()
                 
                 for video in jsonResult["items"] as! NSArray {
