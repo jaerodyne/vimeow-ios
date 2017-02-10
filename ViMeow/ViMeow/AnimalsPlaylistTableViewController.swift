@@ -16,19 +16,14 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     
     var pressed = false
     
-    @IBAction func favoriteBtnPressed(_ sender: Any) {
-//        if !pressed {
-//            let image = UIImage(named: "favorites-icon-no-fill") as UIImage!
-//            let playButton  = UIButton.withType(UIButtonType.custom)
-//            favoriteBtnPressed.setImage(image, forState: .normal)
-//            pressed = true
-//        } else {
-//            
-//            let image = UIImage(named: "favorites") as UIImage!
-//            let playButton  = UIButton.withType(UIButtonType.custom) as! UIButton
-//            btn.setImage(image, forState: .normal)
-//            pressed = false
-//        }
+    @IBAction func favoriteBtnPressed(_ sender: UIButton) {
+        if pressed {
+        sender.setImage(UIImage(named:"favorites-icon-no-fill.png"), for: .normal)
+            pressed = false
+        } else {
+        sender.setImage(UIImage(named:"favorites.png"), for: .normal)
+            pressed = true
+        }
     }
     
     @IBAction func refreshBtnPressed(_ sender: Any) {
