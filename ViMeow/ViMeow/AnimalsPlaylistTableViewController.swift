@@ -14,6 +14,23 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var model = AnimalModel()
     var searchController: UISearchController!
     
+    var pressed = false
+    
+    @IBAction func favoriteBtnPressed(_ sender: Any) {
+//        if !pressed {
+//            let image = UIImage(named: "favorites-icon-no-fill") as UIImage!
+//            let playButton  = UIButton.withType(UIButtonType.custom)
+//            favoriteBtnPressed.setImage(image, forState: .normal)
+//            pressed = true
+//        } else {
+//            
+//            let image = UIImage(named: "favorites") as UIImage!
+//            let playButton  = UIButton.withType(UIButtonType.custom) as! UIButton
+//            btn.setImage(image, forState: .normal)
+//            pressed = false
+//        }
+    }
+    
     @IBAction func refreshBtnPressed(_ sender: Any) {
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
@@ -22,7 +39,6 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             model.getVideos(searchText: "Dogs")
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +50,6 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
-        
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-//        imageView.contentMode = .scaleAspectFit
-//        let image = UIImage(named: "ViMeow Logo")
-//        imageView.image = image
-//        
-//        navigationItem.titleView = imageView
         
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {

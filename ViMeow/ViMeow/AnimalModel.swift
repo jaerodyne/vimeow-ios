@@ -21,10 +21,19 @@ class AnimalModel: NSObject {
     private var url = "https://www.googleapis.com/youtube/v3/search"
     private var nextPageToken = ""
     
+    //save user default for playlist
+    let myDefaults = UserDefaults.standard
+    let currentPageToken = ""
+    
     var animalVideos = [Animal]()
     var delegate: SearchModelDelegate!
     
     func getVideos(searchText: String) {
+        
+        //get current page token
+        if self.myDefaults.string(forKey: currentPageToken) != nil {
+            self.nextPageToken = self.myDefaults.string(forKey: currentPageToken)!
+        }
         
         Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "5", "pageToken": nextPageToken], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
@@ -56,7 +65,8 @@ class AnimalModel: NSObject {
                     }
                     videosResult.append(videoObj)
                 }
-                
+                //set the current page token to the next page token to pull up a different playlist of videos
+                self.myDefaults.set(self.nextPageToken, forKey: self.currentPageToken)
                 self.animalVideos = videosResult
                 if self.delegate != nil {
                     self.delegate.dataAreReady()
