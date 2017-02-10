@@ -58,20 +58,4 @@ class CustomTabBarViewController: UITabBarController, UITabBarControllerDelegate
     override func viewWillAppear(_ animated: Bool) {
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "AvenirNextCondensed-Regular", size: 10)!], for: .normal)
     }
-
-//    func tabBarController(_ tabBarController: UITabBarController,
-//                          didSelect viewController: UIViewController){
-    
-//        if tabBarController.selectedIndex == 0 {
-//            animal.getVideos(searchText: "Cats")
-//            print("We're number 0!")
-//        } else if tabBarController.selectedIndex == 1 {
-//            animal.getVideos(searchText: "Dogs")
-//            print("We're number 1!")
-//        } else {
-//            print("We're whatever number you want us to be!")
-//        }
-//        print("We selected something")
-//    }
-
 }
