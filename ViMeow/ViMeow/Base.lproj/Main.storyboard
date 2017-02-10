@@ -13,7 +13,7 @@
         <!--CATS-->
         <scene sceneID="H9u-1R-XoA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" customClass="CustomNavViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8g-2y-3OV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CATS" image="cat-icon" id="sYA-WE-hHY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz6-YV-3fX">
@@ -96,7 +96,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="300" id="1vN-rN-le7" userLabel="videoCell" customClass="VideoTableViewCell" customModule="ViMeow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vN-rN-le7" id="Dvg-Yy-cLd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>

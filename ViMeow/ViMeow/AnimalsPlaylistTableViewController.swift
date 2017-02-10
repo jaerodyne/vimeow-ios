@@ -20,7 +20,6 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             model.getVideos(searchText: "Cats")
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
-//            self.navigationItem.titleView = setTitle(title: "ViMeow", subtitle: "Dogs Dogs Dogs")
         }
     }
     
@@ -30,15 +29,19 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
         model.delegate = self
         
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 250, height: 44))
+        let titleView = UIView(frame: CGRect(0, 0, 120, 30))
+        let titleImageView = UIImageView(image: UIImage(named: "ViMeow Logo"))
+        titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
+        
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
 //        imageView.contentMode = .scaleAspectFit
-//        imageView.center = UINavigationBar().center
-//        
 //        let image = UIImage(named: "ViMeow Logo")
 //        imageView.image = image
 //        
 //        navigationItem.titleView = imageView
-//        
+        
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
             model.getVideos(searchText: "Cats")

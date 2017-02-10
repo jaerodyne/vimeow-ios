@@ -13,14 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        //change nav bar color
         
         application.statusBarStyle = .lightContent
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().backgroundColor = UIColor.black
         UILabel.appearance().font = UIFont(name: "AvenirNext-BoldItalic", size: 14.0)
+
         return true
     }
     
