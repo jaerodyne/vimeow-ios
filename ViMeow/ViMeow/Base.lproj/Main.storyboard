@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -155,7 +154,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xcG-ZT-rCR">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="fGn-3l-pco">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="fGn-3l-pco">
                             <connections>
                                 <action selector="refreshBtnPressed:" destination="eUV-ei-I5F" id="paU-NQ-dvB"/>
                             </connections>
@@ -169,62 +168,11 @@
             </objects>
             <point key="canvasLocation" x="3112.8000000000002" y="1538.6806596701651"/>
         </scene>
-        <!--Animal Video Table View Controller-->
-        <scene sceneID="MgV-rz-oYM">
-            <objects>
-                <tableViewController id="Mwx-5U-zF0" customClass="AnimalVideoTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WrS-gh-cFO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="NRh-zl-b5T">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="603" id="yRv-hV-dXU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRv-hV-dXU" id="tnR-0y-4qq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <webView contentMode="scaleToFill" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAX-1G-ix2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="662.5"/>
-                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </webView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.1228565705" green="0.1228565705" blue="0.1228565705" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="KAX-1G-ix2" secondAttribute="bottom" constant="-68" id="35f-QW-ag5"/>
-                                                <constraint firstAttribute="trailing" secondItem="KAX-1G-ix2" secondAttribute="trailing" id="BnB-3s-0Jw"/>
-                                                <constraint firstItem="KAX-1G-ix2" firstAttribute="top" secondItem="tnR-0y-4qq" secondAttribute="top" id="cfg-r6-7QB"/>
-                                                <constraint firstItem="KAX-1G-ix2" firstAttribute="leading" secondItem="tnR-0y-4qq" secondAttribute="leading" id="rcC-wy-WDm"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.1228565705" green="0.1228565705" blue="0.1228565705" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Mwx-5U-zF0" id="5Kc-6v-MjO"/>
-                            <outlet property="delegate" destination="Mwx-5U-zF0" id="5ZU-4o-lId"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="qVV-PC-too"/>
-                    <connections>
-                        <outlet property="webView" destination="KAX-1G-ix2" id="sNi-HT-RqK"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n4e-Te-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3921" y="1345"/>
-        </scene>
         <!--FAVORITES-->
         <scene sceneID="Kan-RG-Icj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="29I-we-QoH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FAVORITES" image="favorites-icon-no-fill.png" id="EZH-Gh-PKu"/>
+                    <tabBarItem key="tabBarItem" title="FAVORITES" image="favorites-tab-bar" id="EZH-Gh-PKu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MIi-88-Kvu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -232,10 +180,67 @@
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yy5-hG-YPn" kind="relationship" relationship="rootViewController" id="UZU-T2-L1D"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ced-f2-sab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2145" y="3019"/>
+        </scene>
+        <!--Favorites Table View Controller-->
+        <scene sceneID="NqQ-ZI-2rP">
+            <objects>
+                <tableViewController id="Yy5-hG-YPn" customClass="FavoritesTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="2bg-sY-xVP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="114" id="y64-b1-xcD" customClass="FavoriteTableViewCell" customModule="ViMeow" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y64-b1-xcD" id="3Ys-tt-x6W">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-yh-tS4">
+                                            <rect key="frame" x="8" y="0.0" width="140" height="105"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b1-Vx-Lt8">
+                                            <rect key="frame" x="156" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="6b1-Vx-Lt8" secondAttribute="bottom" constant="84" id="FhB-xz-xhR"/>
+                                        <constraint firstItem="6b1-Vx-Lt8" firstAttribute="leading" secondItem="c0B-yh-tS4" secondAttribute="trailing" constant="8" id="K8s-mV-zh4"/>
+                                        <constraint firstItem="c0B-yh-tS4" firstAttribute="top" secondItem="3Ys-tt-x6W" secondAttribute="top" id="L7V-at-Tbk"/>
+                                        <constraint firstItem="6b1-Vx-Lt8" firstAttribute="top" secondItem="3Ys-tt-x6W" secondAttribute="top" constant="8" id="MZT-uG-6Ba"/>
+                                        <constraint firstAttribute="bottom" secondItem="c0B-yh-tS4" secondAttribute="bottom" constant="8" id="f3M-ph-V0E"/>
+                                        <constraint firstItem="c0B-yh-tS4" firstAttribute="leading" secondItem="3Ys-tt-x6W" secondAttribute="leading" constant="8" id="llg-we-Gw8"/>
+                                        <constraint firstItem="6b1-Vx-Lt8" firstAttribute="leading" secondItem="c0B-yh-tS4" secondAttribute="trailing" constant="8" id="qGT-l4-Pmj"/>
+                                        <constraint firstAttribute="trailing" secondItem="6b1-Vx-Lt8" secondAttribute="trailing" constant="177" id="uBf-Lm-ea4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favoriteVideoImageView" destination="c0B-yh-tS4" id="kPC-Ws-pxk"/>
+                                    <outlet property="favoriteVideoTitleLabel" destination="6b1-Vx-Lt8" id="21H-mi-BmV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yy5-hG-YPn" id="8dO-pP-eDq"/>
+                            <outlet property="delegate" destination="Yy5-hG-YPn" id="ULQ-fQ-v9V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lIP-Tz-XZ4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-42-WBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3173.5999999999999" y="3016.6416791604202"/>
         </scene>
         <!--Animal Video Table View Controller-->
         <scene sceneID="aLf-Qq-UWb">
@@ -329,7 +334,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kz6-5J-VlU">
-                        <barButtonItem key="leftBarButtonItem" image="Back_ffffff_32" id="N64-g7-MEK">
+                        <barButtonItem key="leftBarButtonItem" image="Back_ffffff_32" style="done" id="N64-g7-MEK">
                             <connections>
                                 <action selector="backBtnPressed:" destination="Hvj-Qf-uyP" id="VCV-vh-WCc"/>
                             </connections>
@@ -343,7 +348,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDl-Hl-lg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3969" y="2172"/>
+            <point key="canvasLocation" x="4199" y="1539"/>
         </scene>
     </scenes>
     <resources>
@@ -351,9 +356,10 @@
         <image name="cat-icon" width="25" height="25"/>
         <image name="dog-icon" width="25" height="25"/>
         <image name="favorites-icon-no-fill.png" width="48" height="48"/>
+        <image name="favorites-tab-bar" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AmS-l9-HxK"/>
+        <segue reference="0d0-ih-m7Z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -25,6 +25,13 @@ class AnimalVideoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //display logo
+        let titleView = UIView(frame: CGRect(0, 0, 120, 30))
+        let titleImageView = UIImageView(image: UIImage(named: "ViMeow Logo"))
+        titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
 
     override func viewDidAppear(_ animated: Bool) {
