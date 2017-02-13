@@ -81,6 +81,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
             print("Button tapped on row \(indexPath.row)")
             print("This is a favorite: \(videosArray[indexPath.row].title)")
+        
     }
     
     
