@@ -34,7 +34,7 @@ class VideoTableViewCell: UITableViewCell {
         } else {
             sender.setImage(UIImage(named:"favorites.png"), for: .normal)
             pressed = true
+            self.delegate?.buttonTapped(cell: self)
         }
-        self.delegate?.buttonTapped(cell: self)
     }
 }

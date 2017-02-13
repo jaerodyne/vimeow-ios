@@ -15,6 +15,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
+    var favoriteVideos = [Animal]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
         
+            //make custom cell functions accessible
             cell.delegate = self
             
             cell.videoTitleLabel.text = videosArray[indexPath.row].title
@@ -78,9 +80,9 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         }
         
         //  Do whatever you need to do with the indexPath
-        
+            favoriteVideos.append(videosArray[indexPath.row])
             print("Button tapped on row \(indexPath.row)")
-            print("This is a favorite: \(videosArray[indexPath.row].title)")
+            print("This is a favorite: \(favoriteVideos)")
         
     }
     
@@ -104,6 +106,9 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             vc.vidId = videosArray[indexPath.row].id
         }
     }
+    
+    //write function to save favorite videos array to plist
+    //delete duplicates
 }
 
 extension CGRect{
