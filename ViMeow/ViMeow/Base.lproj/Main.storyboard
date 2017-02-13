@@ -122,7 +122,7 @@
                                                 <constraint firstAttribute="width" constant="202" id="SIG-u7-S8B"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.92437900640000004" green="0.92437900640000004" blue="0.92437900640000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -192,28 +192,28 @@
         <scene sceneID="NqQ-ZI-2rP">
             <objects>
                 <tableViewController id="Yy5-hG-YPn" customClass="FavoritesTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="2bg-sY-xVP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="2bg-sY-xVP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="114" id="y64-b1-xcD" customClass="FavoriteTableViewCell" customModule="ViMeow" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="114" id="y64-b1-xcD" customClass="FavoriteTableViewCell" customModule="ViMeow" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y64-b1-xcD" id="3Ys-tt-x6W">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-yh-tS4">
-                                            <rect key="frame" x="8" y="0.0" width="140" height="105"/>
+                                            <rect key="frame" x="8" y="0.0" width="140" height="106"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b1-Vx-Lt8">
-                                            <rect key="frame" x="156" y="0.0" width="211" height="105"/>
+                                            <rect key="frame" x="156" y="0.0" width="211" height="106"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="211" id="2Vp-cJ-ptL"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -227,6 +227,7 @@
                                         <constraint firstAttribute="bottom" secondItem="6b1-Vx-Lt8" secondAttribute="bottom" constant="8" id="laY-NC-NOm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="favoriteVideoImageView" destination="c0B-yh-tS4" id="NKA-m1-PCe"/>
                                     <outlet property="favoriteVideoTitleLabel" destination="6b1-Vx-Lt8" id="2Lc-ej-7lX"/>
