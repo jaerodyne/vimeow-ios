@@ -13,6 +13,7 @@ class FavoritesTableViewController: UITableViewController {
     var favoriteVideos = [Animal]()
 
     func readPropertyList() {
+        self.favoriteVideos.removeAll()
         do {
             let fileManager = FileManager.default
             let name = "./Favorites"
