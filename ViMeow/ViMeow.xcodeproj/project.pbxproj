@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */; };
+		A51876811E51992E0018740B /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876801E51992E0018740B /* PlistManager.swift */; };
 		A54A40351E515620004A2096 /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54A40341E515620004A2096 /* Favorites.plist */; };
 		A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */; };
 		A570589B1E44534000889F37 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570589A1E44534000889F37 /* CustomTabBarViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViMeow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51876801E51992E0018740B /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
 		A54A40341E515620004A2096 /* Favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Favorites.plist; sourceTree = "<group>"; };
 		A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalVideoTableViewController.swift; sourceTree = "<group>"; };
 		A570589A1E44534000889F37 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A585503B1DD83472006A7210 /* LaunchScreen.storyboard */,
 				A585503E1DD83472006A7210 /* Info.plist */,
 				A54A40341E515620004A2096 /* Favorites.plist */,
+				A51876801E51992E0018740B /* PlistManager.swift */,
 			);
 			path = ViMeow;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51876811E51992E0018740B /* PlistManager.swift in Sources */,
 				A5C89BB81E42CD8A00195597 /* AnimalsPlaylistTableViewController.swift in Sources */,
 				A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,

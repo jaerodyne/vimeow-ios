@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //always load plist upon app launch
+        PlistManager.sharedInstance.startPlistManager()
+        
+        //change UI for navbar and status bar
         application.statusBarStyle = .lightContent
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().backgroundColor = UIColor.black
