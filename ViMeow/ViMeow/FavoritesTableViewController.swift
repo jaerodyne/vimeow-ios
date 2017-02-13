@@ -10,7 +10,7 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
     
-    var favoriteVideos = [Animal]()
+    var favoriteVideos = [Favorite]()
     
     @IBAction func deleteBtnPressed(_ sender: Any) {
         self.favoriteVideos.removeAll()
@@ -41,14 +41,16 @@ class FavoritesTableViewController: UITableViewController {
             
             //iterate through dictionary to get values
             for (key,value) in tempArr! {
-                let favorite = Animal()
+                let favorite = Favorite()
                 favorite.title = (value as! NSObject).value(forKeyPath: "title") as! String
                 favorite._description = (value as! NSObject).value(forKeyPath: "description") as! String
                 favorite.thumbnailUrl = (value as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
                 favorite.id = (value as! NSObject).value(forKeyPath: "id") as! String
+                favorite.dateAdded = (value as! NSObject).value(forKeyPath: "dateAdded") as! Date
+                print(favorite.dateAdded)
                 if !(favoriteVideos.contains(favorite)) {
-                    favoriteVideos.append(favorite)
-                }
+                        favoriteVideos.append(favorite)
+                    }
                 print("favs \(favoriteVideos)")
             }
         } catch {
@@ -65,11 +67,11 @@ class FavoritesTableViewController: UITableViewController {
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         readPropertyList()
+        sortFavoritesByDateAdded(array: favoriteVideos)
         self.tableView.reloadData()
     }
 
@@ -126,6 +128,10 @@ class FavoritesTableViewController: UITableViewController {
             vc.vidDescription = favoriteVideos[indexPath.row]._description
             vc.vidId = favoriteVideos[indexPath.row].id
         }
+    }
+    //order videos from most recent to oldest
+    func sortFavoritesByDateAdded(array: [Favorite]) {
+        self.favoriteVideos = array.sorted(by: { $0.dateAdded.compare($1.dateAdded) == ComparisonResult.orderedDescending })
     }
 
 }

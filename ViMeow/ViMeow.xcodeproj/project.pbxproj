@@ -22,6 +22,7 @@
 		A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BBE1E42D33D00195597 /* Animal.swift */; };
 		A5C89BC41E42DB0D00195597 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BC31E42DB0D00195597 /* VideoTableViewCell.swift */; };
 		A5CCFE2C1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCFE2B1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift */; };
+		A5F3FA8E1E525CA200C02F93 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3FA8D1E525CA200C02F93 /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A5C89BBE1E42D33D00195597 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		A5C89BC31E42DB0D00195597 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		A5CCFE2B1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		A5F3FA8D1E525CA200C02F93 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
 		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			children = (
 				A5C89BBA1E42D26A00195597 /* AnimalModel.swift */,
 				A5C89BBE1E42D33D00195597 /* Animal.swift */,
+				A5F3FA8D1E525CA200C02F93 /* Favorite.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
 				A583EBC21E4D9318001C0AC0 /* FavoritesTableViewController.swift in Sources */,
 				A5CCFE2C1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift in Sources */,
+				A5F3FA8E1E525CA200C02F93 /* Favorite.swift in Sources */,
 				A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */,
 				A570589B1E44534000889F37 /* CustomTabBarViewController.swift in Sources */,
 				A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */,
