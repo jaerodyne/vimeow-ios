@@ -8,32 +8,13 @@
 
 import UIKit
 
-class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate {
+class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate, VideoTableViewCellDelegate {
+    
+    @IBOutlet var tableview: UITableView!
 
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
-    
-    var pressed = false
-    
-    @IBAction func favoriteBtnPressed(_ sender: UIButton) {
-        if pressed {
-        sender.setImage(UIImage(named:"favorites-icon-no-fill.png"), for: .normal)
-            pressed = false
-        } else {
-        sender.setImage(UIImage(named:"favorites.png"), for: .normal)
-            pressed = true
-        }
-    }
-    
-    @IBAction func refreshBtnPressed(_ sender: Any) {
-        let tbc = tabBarController as! CustomTabBarViewController
-        if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats")
-        } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs")
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +48,8 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
+        
+            cell.delegate = self
             
             cell.videoTitleLabel.text = videosArray[indexPath.row].title
             
@@ -88,6 +71,18 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             return cell
         }
     
+    func buttonTapped(cell: VideoTableViewCell) {
+        guard let indexPath = self.tableView.indexPath(for: cell) else {
+            // Note, this shouldn't happen - how did the user tap on a button that wasn't on screen?
+            return
+        }
+        
+        //  Do whatever you need to do with the indexPath
+        
+            print("Button tapped on row \(indexPath.row)")
+            print("This is a favorite: \(videosArray[indexPath.row].title)")
+    }
+    
     
     func dataAreReady() {
         self.videosArray = model.animalVideos
@@ -95,6 +90,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(videosArray[indexPath.row].title)
         performSegue(withIdentifier: "showVideo", sender: self)
     }
     

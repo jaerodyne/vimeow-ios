@@ -8,21 +8,24 @@
 
 import UIKit
 
+protocol VideoTableViewCellDelegate: class {
+    func buttonTapped(cell: VideoTableViewCell)
+}
+
 class VideoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var videoImageView: UIImageView!
-    
     @IBOutlet weak var videoTitleLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var favoriteBtn: UIButton!
+    
+    var delegate: VideoTableViewCellDelegate?
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.delegate = nil
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func favoriteBtnTapped(sender: UIButton) {
+        self.delegate?.buttonTapped(cell: self)
     }
-
 }

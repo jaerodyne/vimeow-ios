@@ -112,7 +112,7 @@
                                             </constraints>
                                             <state key="normal" image="favorites-icon-no-fill.png"/>
                                             <connections>
-                                                <action selector="favoriteBtnPressed:" destination="eUV-ei-I5F" eventType="touchDown" id="j9T-y0-VH3"/>
+                                                <action selector="favoriteBtnTappedWithSender:" destination="1vN-rN-le7" eventType="touchUpInside" id="prQ-aU-oVQ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-7O-Eod">
@@ -141,6 +141,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="0.92392241379310347" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="favoriteBtn" destination="g7s-io-mXA" id="w0b-LL-wA5"/>
                                     <outlet property="videoImageView" destination="uHt-BX-Dh3" id="86u-HU-XIc"/>
                                     <outlet property="videoTitleLabel" destination="CYD-7O-Eod" id="cVK-ng-LB0"/>
                                 </connections>
@@ -159,6 +160,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableview" destination="AoN-5o-MDU" id="FbY-Y2-maf"/>
                         <segue destination="Hvj-Qf-uyP" kind="show" identifier="showVideo" id="gVp-r0-4EC"/>
                     </connections>
                 </tableViewController>
