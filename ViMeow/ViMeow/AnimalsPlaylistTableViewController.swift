@@ -80,8 +80,10 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         }
         
         //  Do whatever you need to do with the indexPath
-            favoriteVideos.append(videosArray[indexPath.row])
-            print("This is a favorite: \(favoriteVideos)")
+        var favoriteVideo = videosArray[indexPath.row]
+        //PlistManager.sharedInstance.saveValue(favoriteVideo, forKey: favorites)
+        favoriteVideos.append(favoriteVideo)
+        print("This is a favorite: \(favoriteVideos)")
     }
     
     

@@ -19,9 +19,8 @@ class FavoritesTableViewController: UITableViewController {
         let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
             plistData = try PropertyListSerialization.propertyList(from: plistXML,                                                                             options: .mutableContainersAndLeaves, format: &format) as! [String:AnyObject]
-           // favoriteVideos = plistData["Favorites"] as! [Animal]
             let tempArr = plistData["Favorites"] as! NSArray
-         //   print(tempArr)
+            
             for video in tempArr {
                 let favorite = Animal()
                 favorite.title = (video as! NSObject).value(forKeyPath: "title") as! String
@@ -31,7 +30,6 @@ class FavoritesTableViewController: UITableViewController {
                 favorite.id = (video as! NSObject).value(forKeyPath: "id") as! String
                 favoriteVideos.append(favorite)
             }
-            print(favoriteVideos[0].thumbnailUrl)
         } catch {
             print("Error reading plist: \(error), format: \(format)")
         }
@@ -69,12 +67,10 @@ class FavoritesTableViewController: UITableViewController {
         cell.favoriteVideoTitleLabel.text = favoriteVideos[indexPath.row].title
         
         var urlString = favoriteVideos[indexPath.row].thumbnailUrl.replacingOccurrences(of: "\r\n", with: " ")
+        //remove \r\n from end of urlString, like why does this exist? 
         urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
-        print(urlString)
-        //remove \r\n from string, like why does this exist?
         //let url = URL(string: urlString)
         let url = URL(string: urlString)
-        print(url)
         let session = URLSession.shared
         let task = session.dataTask(with: url!, completionHandler: { (data, response, error) in
             DispatchQueue.main.async(execute: {
