@@ -34,6 +34,9 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
+        
+        //set plist key for favorites
+//        let favorite = "favorite"
     }
     //get rid of whitespace before and after tableview cells
     override func viewDidLayoutSubviews() {
@@ -80,10 +83,18 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         }
         
         //  Do whatever you need to do with the indexPath
-        var favoriteVideo = videosArray[indexPath.row]
-        //PlistManager.sharedInstance.saveValue(favoriteVideo, forKey: favorites)
-        favoriteVideos.append(favoriteVideo)
-        print("This is a favorite: \(favoriteVideos)")
+//        let favorite = Animal()
+//        favorite.title = (video as! NSObject).value(forKeyPath: "title") as! String
+//        favorite._description = (video as! NSObject).value(forKeyPath: "description") as! String
+//        favorite.thumbnailUrl = (video as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
+//        print(favorite.thumbnailUrl)
+//        favorite.id = (video as! NSObject).value(forKeyPath: "id") as! String
+//        favoriteVideos.append(favorite)
+        var favoriteVideo = videosArray[indexPath.row] as NSObject
+        var favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
+        PlistManager.sharedInstance.addNewItemWithKey(key: "favorite", value: favoriteVideoDict as AnyObject)
+        //favoriteVideos.append(favoriteVideo)
+//        print("This is a favorite: \(favoriteVideos)")
     }
     
     

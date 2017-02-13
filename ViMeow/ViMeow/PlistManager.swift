@@ -8,7 +8,7 @@
 
 import Foundation
 
-let plistFileName:String = "MyData"
+let plistFileName:String = "Favorites"
 
 struct Plist {
   
