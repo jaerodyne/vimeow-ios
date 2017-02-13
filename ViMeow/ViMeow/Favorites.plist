@@ -1,31 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Favorites</key>
-	<array>
-		<dict>
-			<key>title</key>
-			<string>Funny Cats Meeting Cute Baby Animals Compilation [CUTE]</string>
-			<key>description</key>
-			<string>Check out these funny cat videos of cats meeting cute baby animals for the first time. Cat meets baby animal in this cute videos and funny videos compilation.</string>
-			<key>thumbnailUrl</key>
-			<string>https://i.ytimg.com/vi/l4mKHbrlEt4/hqdefault.jpg
-</string>
-			<key>id</key>
-			<string>l4mKHbrlEt4</string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Funny Cats Acting Like Humans Compilation 2015</string>
-			<key>description</key>
-			<string>Here are some cats behaving like humans. Watch these funny videos of funny cats acting like humans in this cat videos compilation.</string>
-			<key>thumbnailUrl</key>
-			<string>https://i.ytimg.com/vi/PHAc3_MEjgQ/hqdefault.jpg
-</string>
-			<key>id</key>
-			<string>PHAc3_MEjgQ</string>
-		</dict>
-	</array>
-</dict>
+<dict/>
 </plist>

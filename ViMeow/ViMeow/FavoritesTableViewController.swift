@@ -26,9 +26,9 @@ class FavoritesTableViewController: UITableViewController {
                 favorite.title = (video as! NSObject).value(forKeyPath: "title") as! String
                 favorite._description = (video as! NSObject).value(forKeyPath: "description") as! String
                 favorite.thumbnailUrl = (video as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
-                print(favorite.thumbnailUrl)
                 favorite.id = (video as! NSObject).value(forKeyPath: "id") as! String
                 favoriteVideos.append(favorite)
+                print("favs \(favoriteVideos)")
             }
         } catch {
             print("Error reading plist: \(error), format: \(format)")
@@ -45,7 +45,7 @@ class FavoritesTableViewController: UITableViewController {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
         
-        readPropertyList()
+//        readPropertyList()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,10 +66,21 @@ class FavoritesTableViewController: UITableViewController {
         
         cell.favoriteVideoTitleLabel.text = favoriteVideos[indexPath.row].title
         
-        var urlString = favoriteVideos[indexPath.row].thumbnailUrl.replacingOccurrences(of: "\r\n", with: " ")
-        //remove \r\n from end of urlString, like why does this exist? 
-        urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
+//        var favoriteVideo = favoriteVideos[indexPath.row] as NSObject
+//        if let myFavorites = PlistManager.sharedInstance.getValueForKey(key: favoriteVideos[indexPath.row].id) {
+//            print("myFavorites")
+//            
+//            print(myFavorites)
+//                }
+        
+//        var urlString = PlistManager.sharedInstance.getValueForKey(key: favoriteVideos[indexPath.row].thumbnailUrl)
+//            .replacingOccurrences(of: "\r\n", with: " ")
+            //remove \r\n from end of urlString, like why does this exist?
+//            urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
         //let url = URL(string: urlString)
+        var urlString = favoriteVideos[indexPath.row].thumbnailUrl.replacingOccurrences(of: "\r\n", with: " ")
+        //remove \r\n from end of urlString, like why does this exist?
+        urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
         let url = URL(string: urlString)
         let session = URLSession.shared
         let task = session.dataTask(with: url!, completionHandler: { (data, response, error) in
@@ -85,6 +96,7 @@ class FavoritesTableViewController: UITableViewController {
         })
         task.resume()
         return cell
+
     }
 
     

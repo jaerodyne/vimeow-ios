@@ -15,7 +15,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
-    var favoriteVideos = [Animal]()
+    var favoriteVideos = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +92,12 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
 //        favoriteVideos.append(favorite)
         var favoriteVideo = videosArray[indexPath.row] as NSObject
         var favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
-        PlistManager.sharedInstance.addNewItemWithKey(key: "favorite", value: favoriteVideoDict as AnyObject)
+        var dict = PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
+        //get dict value and throw it into array as new value into plist
+        favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
+        
         //favoriteVideos.append(favoriteVideo)
-//        print("This is a favorite: \(favoriteVideos)")
+        print("This is a favorite: \(favoriteVideos)")
     }
     
     
