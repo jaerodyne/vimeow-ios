@@ -11,27 +11,41 @@ import UIKit
 class FavoritesTableViewController: UITableViewController {
     
     var favoriteVideos = [Animal]()
-    
+
     func readPropertyList() {
-        var format = PropertyListSerialization.PropertyListFormat.xml
-        var plistData:[String:AnyObject] = [:]
-        let plistPath:String?  = Bundle.main.path(forResource: "./Favorites", ofType: "plist")!
-        let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
-            plistData = try PropertyListSerialization.propertyList(from: plistXML,                                                                             options: .mutableContainersAndLeaves, format: &format) as! [String:AnyObject]
-            let tempArr = plistData["Favorites"] as! NSArray
+            let fileManager = FileManager.default
+            let name = "./Favorites"
+        
+            var sourcePath:String? {
+                guard let path = Bundle.main.path(forResource: name, ofType: "plist") else { return .none }
+                return path
+            }
             
-            for video in tempArr {
+            var destPath:String? {
+                guard sourcePath != .none else { return .none }
+                let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                return (dir as NSString).appendingPathComponent("\(name).plist")
+            }
+            
+            let dict = NSDictionary(contentsOfFile: destPath!)
+
+            let tempArr = dict
+            
+            //iterate through dictionary to get values
+            for (key,value) in tempArr! {
                 let favorite = Animal()
-                favorite.title = (video as! NSObject).value(forKeyPath: "title") as! String
-                favorite._description = (video as! NSObject).value(forKeyPath: "description") as! String
-                favorite.thumbnailUrl = (video as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
-                favorite.id = (video as! NSObject).value(forKeyPath: "id") as! String
-                favoriteVideos.append(favorite)
+                favorite.title = (value as! NSObject).value(forKeyPath: "title") as! String
+                favorite._description = (value as! NSObject).value(forKeyPath: "description") as! String
+                favorite.thumbnailUrl = (value as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
+                favorite.id = (value as! NSObject).value(forKeyPath: "id") as! String
+                if !(favoriteVideos.contains(favorite)) {
+                    favoriteVideos.append(favorite)
+                }
                 print("favs \(favoriteVideos)")
             }
         } catch {
-            print("Error reading plist: \(error), format: \(format)")
+            print("Error reading plist: \(error)")
         }
     }
 
@@ -45,7 +59,12 @@ class FavoritesTableViewController: UITableViewController {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
         
-//        readPropertyList()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        readPropertyList()
+        self.tableView.reloadData()
+//        PlistManager.sharedInstance.removeAllItemsFromPlist()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,18 +85,6 @@ class FavoritesTableViewController: UITableViewController {
         
         cell.favoriteVideoTitleLabel.text = favoriteVideos[indexPath.row].title
         
-//        var favoriteVideo = favoriteVideos[indexPath.row] as NSObject
-//        if let myFavorites = PlistManager.sharedInstance.getValueForKey(key: favoriteVideos[indexPath.row].id) {
-//            print("myFavorites")
-//            
-//            print(myFavorites)
-//                }
-        
-//        var urlString = PlistManager.sharedInstance.getValueForKey(key: favoriteVideos[indexPath.row].thumbnailUrl)
-//            .replacingOccurrences(of: "\r\n", with: " ")
-            //remove \r\n from end of urlString, like why does this exist?
-//            urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
-        //let url = URL(string: urlString)
         var urlString = favoriteVideos[indexPath.row].thumbnailUrl.replacingOccurrences(of: "\r\n", with: " ")
         //remove \r\n from end of urlString, like why does this exist?
         urlString = String(urlString.characters.filter { !" \n\t\r".characters.contains($0) })
@@ -98,12 +105,10 @@ class FavoritesTableViewController: UITableViewController {
         return cell
 
     }
-
     
     // MARK: - Navigation
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(favoriteVideos[indexPath.row].title)
         performSegue(withIdentifier: "showFavorite", sender: self)
     }
  
@@ -118,3 +123,5 @@ class FavoritesTableViewController: UITableViewController {
     }
 
 }
+
+

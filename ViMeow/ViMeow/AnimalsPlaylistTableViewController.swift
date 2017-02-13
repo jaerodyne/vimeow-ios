@@ -34,10 +34,9 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
-        
-        //set plist key for favorites
-//        let favorite = "favorite"
+
     }
+    
     //get rid of whitespace before and after tableview cells
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -76,28 +75,25 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             return cell
         }
     
+    var favorited = false
+    
     func buttonTapped(cell: VideoTableViewCell) {
+        
+        favorited = true
+        
         guard let indexPath = self.tableView.indexPath(for: cell) else {
             // Note, this shouldn't happen - how did the user tap on a button that wasn't on screen?
             return
         }
         
         //  Do whatever you need to do with the indexPath
-//        let favorite = Animal()
-//        favorite.title = (video as! NSObject).value(forKeyPath: "title") as! String
-//        favorite._description = (video as! NSObject).value(forKeyPath: "description") as! String
-//        favorite.thumbnailUrl = (video as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
-//        print(favorite.thumbnailUrl)
-//        favorite.id = (video as! NSObject).value(forKeyPath: "id") as! String
-//        favoriteVideos.append(favorite)
-        var favoriteVideo = videosArray[indexPath.row] as NSObject
-        var favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
-        var dict = PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
-        //get dict value and throw it into array as new value into plist
+        let favoriteVideo = videosArray[indexPath.row] as NSObject
+        let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
+        let dict = PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
+        //get dict value and throw it into array as new value
+        // check if value is a duplicate before appending
         favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
-        
-        //favoriteVideos.append(favoriteVideo)
-        print("This is a favorite: \(favoriteVideos)")
+        PlistManager.sharedInstance.saveValue(value: favoriteVideos as AnyObject, forKey: "Favorites")
     }
     
     
@@ -128,6 +124,19 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
 extension CGRect{
     init(_ x:CGFloat,_ y:CGFloat,_ width:CGFloat,_ height:CGFloat) {
         self.init(x:x,y:y,width:width,height:height)
+    }
+}
+
+extension Array where Element: Equatable {
+    /// Array containing only _unique_ elements.
+    var unique: [Element] {
+        var result: [Element] = []
+        for element in self {
+            guard !result.contains(element) else { continue }
+            result.append(element)
+        }
+        
+        return result
     }
 }
 
