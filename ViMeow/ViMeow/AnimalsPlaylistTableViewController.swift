@@ -54,7 +54,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
             //make custom cell functions accessible
             cell.delegate = self
-            
+        
             cell.videoTitleLabel.text = videosArray[indexPath.row].title
             
             let urlString = videosArray[indexPath.row].thumbnailUrl
@@ -75,25 +75,33 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             return cell
         }
     
-    var favorited = false
-    
     func buttonTapped(cell: VideoTableViewCell) {
-        
-        favorited = true
         
         guard let indexPath = self.tableView.indexPath(for: cell) else {
             // Note, this shouldn't happen - how did the user tap on a button that wasn't on screen?
             return
         }
         
-        //  Do whatever you need to do with the indexPath
+//        favoriteVideos.removeAll()
+        
         let favoriteVideo = videosArray[indexPath.row] as NSObject
-        let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
-        let dict = PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
-        //get dict value and throw it into array as new value
-        // check if value is a duplicate before appending
-        favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
-        PlistManager.sharedInstance.saveValue(value: favoriteVideos as AnyObject, forKey: "Favorites")
+        
+        //if count is odd, button is toggled favorite
+        //if count is even, button is removed as favorite
+        if cell.count % 2 == 0 {
+//            print(favoriteVideos)
+//            print((favoriteVideo).value(forKeyPath: "title") as! String)
+//            favoriteVideos.indexOf(.remove
+//            favoriteVideos
+            PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
+        } else {
+            //  Do whatever you need to do with the indexPath
+            let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String] as [String : Any]
+            PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
+            //get dict value and throw it into array as new value
+            favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
+            PlistManager.sharedInstance.saveValue(value: favoriteVideos as AnyObject, forKey: "Favorites")
+        }
     }
     
     
@@ -128,15 +136,12 @@ extension CGRect{
 }
 
 extension Array where Element: Equatable {
-    /// Array containing only _unique_ elements.
-    var unique: [Element] {
-        var result: [Element] = []
-        for element in self {
-            guard !result.contains(element) else { continue }
-            result.append(element)
+    
+    // Remove first collection element that is equal to the given `object`:
+    mutating func remove(object: Element) {
+        if let index = index(of: object) {
+            remove(at: index)
         }
-        
-        return result
     }
 }
 
