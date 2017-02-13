@@ -39,7 +39,7 @@ class VideoTableViewCell: UITableViewCell {
         }
     }
     
-    var count = 0
+    var count = 1
     
     func unmarkedAsFavorite() {
         count+=1

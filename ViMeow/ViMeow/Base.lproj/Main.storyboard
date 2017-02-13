@@ -239,7 +239,13 @@
                             <outlet property="delegate" destination="Yy5-hG-YPn" id="ULQ-fQ-v9V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lIP-Tz-XZ4"/>
+                    <navigationItem key="navigationItem" id="lIP-Tz-XZ4">
+                        <barButtonItem key="rightBarButtonItem" title="Delete All" id="rH2-Tz-uvr">
+                            <connections>
+                                <action selector="deleteBtnPressed:" destination="Yy5-hG-YPn" id="KNX-yW-gII"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Hvj-Qf-uyP" kind="show" identifier="showFavorite" id="XYk-mw-TRU"/>
                     </connections>

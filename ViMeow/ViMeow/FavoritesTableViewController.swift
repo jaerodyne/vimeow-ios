@@ -11,6 +11,12 @@ import UIKit
 class FavoritesTableViewController: UITableViewController {
     
     var favoriteVideos = [Animal]()
+    
+    @IBAction func deleteBtnPressed(_ sender: Any) {
+        self.favoriteVideos.removeAll()
+        PlistManager.sharedInstance.removeAllItemsFromPlist()
+        self.tableView.reloadData()
+    }
 
     func readPropertyList() {
         self.favoriteVideos.removeAll()
@@ -65,7 +71,6 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         readPropertyList()
         self.tableView.reloadData()
-//        PlistManager.sharedInstance.removeAllItemsFromPlist()
     }
 
     override func didReceiveMemoryWarning() {
