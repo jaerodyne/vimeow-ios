@@ -54,7 +54,6 @@ class AnimalModel: NSObject {
                         videoObj.id = (video as! NSObject).value(forKeyPath: "id.videoId") as! String
                     }
                     
-                    
                     // get the best thumbnail for video
                     if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") != nil {
                         videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") as! String

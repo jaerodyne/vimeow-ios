@@ -81,9 +81,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
         
         //  Do whatever you need to do with the indexPath
             favoriteVideos.append(videosArray[indexPath.row])
-            print("Button tapped on row \(indexPath.row)")
             print("This is a favorite: \(favoriteVideos)")
-        
     }
     
     
