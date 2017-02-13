@@ -240,10 +240,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="lIP-Tz-XZ4"/>
+                    <connections>
+                        <segue destination="Hvj-Qf-uyP" kind="show" identifier="showFavorite" id="XYk-mw-TRU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-42-WBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173.5999999999999" y="3016.6416791604202"/>
+            <point key="canvasLocation" x="3281" y="2767"/>
         </scene>
         <!--Animal Video Table View Controller-->
         <scene sceneID="aLf-Qq-UWb">
@@ -363,6 +366,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0d0-ih-m7Z"/>
+        <segue reference="XYk-mw-TRU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

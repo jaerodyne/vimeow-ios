@@ -91,14 +91,22 @@ class FavoritesTableViewController: UITableViewController {
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(favoriteVideos[indexPath.row].title)
+        performSegue(withIdentifier: "showFavorite", sender: self)
     }
-    */
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFavorite" {
+            let vc = segue.destination as! AnimalVideoTableViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            vc.vidTitle = favoriteVideos[indexPath.row].title
+            vc.vidDescription = favoriteVideos[indexPath.row]._description
+            vc.vidId = favoriteVideos[indexPath.row].id
+        }
+    }
 
 }

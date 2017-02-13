@@ -16,7 +16,7 @@ class AnimalVideoTableViewController: UITableViewController {
     
     
     @IBAction func backBtnPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
     var vidTitle: String!
