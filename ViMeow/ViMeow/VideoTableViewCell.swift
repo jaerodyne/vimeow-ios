@@ -31,17 +31,11 @@ class VideoTableViewCell: UITableViewCell {
         if pressed {
             sender.setImage(UIImage(named:"favorites-icon-no-fill.png"), for: .normal)
             pressed = false
-            unmarkedAsFavorite()
         } else {
             sender.setImage(UIImage(named:"favorites.png"), for: .normal)
             pressed = true
-            self.delegate?.buttonTapped(cell: self)
         }
+        self.delegate?.buttonTapped(cell: self)
     }
-    
-    var count = 1
-    
-    func unmarkedAsFavorite() {
-        count+=1
-    }
+
 }

@@ -82,28 +82,26 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             return
         }
         
-//        favoriteVideos.removeAll()
-        
         let favoriteVideo = videosArray[indexPath.row] as NSObject
-        
-        //if count is odd, button is toggled favorite
-        //if count is even, button is removed as favorite
-        if cell.count % 2 == 0 {
-//            print(favoriteVideos)
-//            print((favoriteVideo).value(forKeyPath: "title") as! String)
-//            favoriteVideos.indexOf(.remove
-//            favoriteVideos
-            PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
-        } else {
+        if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites.png")))! {
             //  Do whatever you need to do with the indexPath
             let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String, "dateAdded": Date()] as [String : Any]
             PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
             //get dict value and throw it into array as new value
             favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
             PlistManager.sharedInstance.saveValue(value: favoriteVideos as AnyObject, forKey: "Favorites")
+        } else if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites-icon-no-fill.png")))! {
+            //remove from favoriteVideos
+            let unfavoritedVideo = (favoriteVideo).value(forKeyPath: "id") as! String
+            for (index, var favorite) in favoriteVideos.enumerated() {
+                if unfavoritedVideo == favorite["id"] as! String {
+                    favoriteVideos.remove(at: index)
+                }
+            }
+            //remove from plist
+            PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
         }
-    }
-    
+    }    
     
     func dataAreReady() {
         self.videosArray = model.animalVideos

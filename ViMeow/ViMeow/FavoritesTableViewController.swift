@@ -47,11 +47,10 @@ class FavoritesTableViewController: UITableViewController {
                 favorite.thumbnailUrl = (value as! NSObject).value(forKeyPath: "thumbnailUrl") as! String
                 favorite.id = (value as! NSObject).value(forKeyPath: "id") as! String
                 favorite.dateAdded = (value as! NSObject).value(forKeyPath: "dateAdded") as! Date
-                print(favorite.dateAdded)
                 if !(favoriteVideos.contains(favorite)) {
                         favoriteVideos.append(favorite)
                     }
-                print("favs \(favoriteVideos)")
+//                print("favs \(favoriteVideos)")
             }
         } catch {
             print("Error reading plist: \(error)")
