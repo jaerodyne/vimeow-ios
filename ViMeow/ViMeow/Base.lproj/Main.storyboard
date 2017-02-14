@@ -102,7 +102,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-BX-Dh3">
-                                            <rect key="frame" x="8" y="17" width="157" height="124"/>
+                                            <rect key="frame" x="8" y="17" width="153" height="124"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7s-io-mXA">
                                             <rect key="frame" x="179" y="93" width="41" height="56"/>
@@ -115,7 +115,7 @@
                                                 <action selector="favoriteBtnTappedWithSender:" destination="1vN-rN-le7" eventType="touchUpInside" id="prQ-aU-oVQ"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-7O-Eod">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-7O-Eod">
                                             <rect key="frame" x="179" y="17" width="196" height="76"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="76" id="5o1-6K-kC5"/>
@@ -127,7 +127,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="CYD-7O-Eod" firstAttribute="leading" secondItem="uHt-BX-Dh3" secondAttribute="trailing" constant="8" id="LVE-gL-ph8"/>
+                                        <constraint firstItem="CYD-7O-Eod" firstAttribute="leading" secondItem="uHt-BX-Dh3" secondAttribute="trailing" constant="12" id="LVE-gL-ph8"/>
                                         <constraint firstItem="CYD-7O-Eod" firstAttribute="top" secondItem="Dvg-Yy-cLd" secondAttribute="top" constant="17" id="N0U-ET-ZGX"/>
                                         <constraint firstAttribute="bottom" secondItem="g7s-io-mXA" secondAttribute="bottom" constant="3" id="NDA-W2-2ph"/>
                                         <constraint firstItem="g7s-io-mXA" firstAttribute="leading" secondItem="uHt-BX-Dh3" secondAttribute="trailing" constant="8" id="RrX-0k-Ppg"/>
@@ -207,7 +207,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-yh-tS4">
                                             <rect key="frame" x="8" y="0.0" width="140" height="106"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b1-Vx-Lt8">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6b1-Vx-Lt8">
                                             <rect key="frame" x="156" y="0.0" width="211" height="106"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="211" id="2Vp-cJ-ptL"/>
@@ -372,7 +372,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0d0-ih-m7Z"/>
-        <segue reference="XYk-mw-TRU"/>
+        <segue reference="gVp-r0-4EC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
