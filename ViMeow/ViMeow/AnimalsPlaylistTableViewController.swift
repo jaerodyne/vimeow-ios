@@ -17,6 +17,15 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
     var searchController: UISearchController!
     var favoriteVideos = [[String: Any]]()
     
+    @IBAction func refreshBtnPressed(_ sender: Any) {
+        let tbc = tabBarController as! CustomTabBarViewController
+        if tbc.selectedIndex == 0 {
+            model.getVideos(searchText: "Cats")
+        } else if tbc.selectedIndex == 1 {
+            model.getVideos(searchText: "Dogs")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
