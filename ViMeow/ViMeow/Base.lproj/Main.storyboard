@@ -323,6 +323,9 @@
                                                         <constraint firstAttribute="width" constant="30" id="nid-aa-3fl"/>
                                                     </constraints>
                                                     <state key="normal" image="favorites-icon-no-fill"/>
+                                                    <connections>
+                                                        <action selector="favoriteBtnTappedWithSender:" destination="PSe-Kz-Kr2" eventType="touchUpInside" id="Kur-21-hlt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -339,7 +342,8 @@
                                         </constraints>
                                         <size key="customSize" width="125" height="125"/>
                                         <connections>
-                                            <outlet property="thumbnailImage" destination="hcO-ft-zfk" id="Ybg-K5-7el"/>
+                                            <outlet property="favoriteBtn" destination="lUv-QQ-KjO" id="Bi6-eL-Dlu"/>
+                                            <outlet property="thumbnailImage" destination="hcO-ft-zfk" id="oBL-7v-a9d"/>
                                             <segue destination="Hvj-Qf-uyP" kind="show" identifier="showVideo" id="qUg-OI-Eft"/>
                                         </connections>
                                     </collectionViewCell>

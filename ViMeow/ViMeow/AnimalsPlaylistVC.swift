@@ -78,6 +78,8 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
+        print(cell)
+        
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let urlString = videosArray[indexPath.row].thumbnailUrl
         let url = URL(string: urlString)
@@ -118,7 +120,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     //TODO: Add button to implement favorites and save them to PList
-    /*
     func buttonTapped(cell: VideoThumbnailCell) {
         
         guard let indexPath = self.collectionView.indexPath(for: cell) else {
@@ -126,15 +127,16 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             return
         }
         
+        
         let favoriteVideo = videosArray[indexPath.row] as NSObject
-        if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites.png")))! {
+        if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites")))! {
             //  Do whatever you need to do with the indexPath
             let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String, "dateAdded": Date()] as [String : Any]
             PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
             //get dict value and throw it into array as new value
             favoriteVideos.append(PlistManager.sharedInstance.getValueForKey(key: (favoriteVideo).value(forKeyPath: "id") as! String) as! [String : Any])
             PlistManager.sharedInstance.saveValue(value: favoriteVideos as AnyObject, forKey: "Favorites")
-        } else if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites-icon-no-fill.png")))! {
+        } else if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites-icon-no-fill")))! {
             //remove from favoriteVideos
             let unfavoritedVideo = (favoriteVideo).value(forKeyPath: "id") as! String
             for (index, var favorite) in favoriteVideos.enumerated() {
@@ -146,7 +148,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
         }
     }
- */
 }
 
 extension CGRect{
