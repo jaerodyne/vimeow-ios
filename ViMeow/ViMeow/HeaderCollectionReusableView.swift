@@ -11,6 +11,7 @@ import UIKit
 class HeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var tabTitle: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     func viewDidLayoutSubviews() {
         tabTitle.font = tabTitle.font.withSize(46)

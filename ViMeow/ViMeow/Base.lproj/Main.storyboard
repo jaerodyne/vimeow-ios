@@ -372,6 +372,7 @@
                                         <constraint firstAttribute="trailing" secondItem="UiN-mr-Rdg" secondAttribute="trailing" id="vyY-59-9ju"/>
                                     </constraints>
                                     <connections>
+                                        <outlet property="imageView" destination="UiN-mr-Rdg" id="nmX-ek-xAa"/>
                                         <outlet property="tabTitle" destination="m4Q-9R-xab" id="tvY-wV-s9K"/>
                                     </connections>
                                 </collectionReusableView>

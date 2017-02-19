@@ -119,11 +119,19 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath) as! HeaderCollectionReusableView
+
+        let tbc = tabBarController as! CustomTabBarViewController
+        if tbc.selectedIndex == 0 {
+            header.imageView.image = UIImage(named: "cat-header")
+            header.tabTitle.text = "CATS CATS CATS"
+        } else if tbc.selectedIndex == 1 {
+            header.imageView.image = UIImage(named: "dog-header")
+            header.tabTitle.text = "DOGS DOGS DOGS"
+        }
         return header
     }
     
-    //TODO: Add button to implement favorites and save them to PList
     func buttonTapped(cell: VideoThumbnailCell) {
         
         guard let indexPath = self.collectionView.indexPath(for: cell) else {
