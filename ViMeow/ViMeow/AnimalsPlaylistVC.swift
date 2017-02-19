@@ -26,7 +26,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         model.delegate = self
@@ -46,7 +45,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
-        
         
         let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(AnimalPlaylistVC.buttonMethod))
         navigationItem.leftBarButtonItem = refreshButton
@@ -81,9 +79,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        
         let urlString = videosArray[indexPath.row].thumbnailUrl
-        print(urlString)
         let url = URL(string: urlString)
         let session = URLSession.shared
         let task = session.dataTask(with: url!, completionHandler: { (data, response, error) in
@@ -104,9 +100,16 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     
     // MARK: - UICollectionViewDelegate protocol
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVideo" {
+            let vc = segue.destination as! AnimalVideoTableViewController
+            if let cell = sender as? VideoThumbnailCell {
+                let indexPath = collectionView!.indexPath(for: cell)
+                vc.vidId = videosArray[(indexPath?.row)!].id
+                vc.vidTitle = videosArray[(indexPath?.row)!].title
+                vc.vidDescription = videosArray[(indexPath?.row)!]._description
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -143,25 +146,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
         }
     }
-    
-     //TODO: Implement segue to tableview 
- 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(videosArray[indexPath.row].title)
-        performSegue(withIdentifier: "showVideo", sender: self)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showVideo" {
-            let vc = segue.destination as! AnimalVideoTableViewController
-            let indexPath = tableView.indexPathForSelectedRow!
-            vc.vidTitle = videosArray[indexPath.row].title
-            vc.vidDescription = videosArray[indexPath.row]._description
-            vc.vidId = videosArray[indexPath.row].id
-        }
-    }
-     */
+ */
 }
 
 extension CGRect{

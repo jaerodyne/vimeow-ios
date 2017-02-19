@@ -32,6 +32,8 @@ class AnimalVideoTableViewController: UITableViewController {
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
+        
+        print("Video Description: \(vidDescription)")
     }
 
     override func viewDidAppear(_ animated: Bool) {

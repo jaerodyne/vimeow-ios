@@ -85,89 +85,6 @@
             </objects>
             <point key="canvasLocation" x="2145" y="2293"/>
         </scene>
-        <!--Animals Playlist Table View Controller-->
-        <scene sceneID="WLW-dN-bzb">
-            <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="eUV-ei-I5F" customClass="AnimalsPlaylistTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="152" sectionHeaderHeight="18" sectionFooterHeight="18" id="AoN-5o-MDU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="152" id="1vN-rN-le7" userLabel="videoCell" customClass="VideoTableViewCell" customModule="ViMeow" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="152"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vN-rN-le7" id="Dvg-Yy-cLd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-BX-Dh3">
-                                            <rect key="frame" x="8" y="17" width="153" height="124"/>
-                                        </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7s-io-mXA">
-                                            <rect key="frame" x="179" y="93" width="41" height="56"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="56" id="o0P-Qh-El6"/>
-                                                <constraint firstAttribute="width" constant="40" id="rog-pf-ih0"/>
-                                            </constraints>
-                                            <state key="normal" image="favorites-icon-no-fill.png"/>
-                                            <connections>
-                                                <action selector="favoriteBtnTappedWithSender:" destination="1vN-rN-le7" eventType="touchUpInside" id="prQ-aU-oVQ"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYD-7O-Eod">
-                                            <rect key="frame" x="179" y="17" width="196" height="76"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="76" id="5o1-6K-kC5"/>
-                                                <constraint firstAttribute="width" constant="202" id="SIG-u7-S8B"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="CYD-7O-Eod" firstAttribute="leading" secondItem="uHt-BX-Dh3" secondAttribute="trailing" constant="12" id="LVE-gL-ph8"/>
-                                        <constraint firstItem="CYD-7O-Eod" firstAttribute="top" secondItem="Dvg-Yy-cLd" secondAttribute="top" constant="17" id="N0U-ET-ZGX"/>
-                                        <constraint firstAttribute="bottom" secondItem="g7s-io-mXA" secondAttribute="bottom" constant="3" id="NDA-W2-2ph"/>
-                                        <constraint firstItem="g7s-io-mXA" firstAttribute="leading" secondItem="uHt-BX-Dh3" secondAttribute="trailing" constant="8" id="RrX-0k-Ppg"/>
-                                        <constraint firstAttribute="bottom" secondItem="uHt-BX-Dh3" secondAttribute="bottom" constant="11" id="SeG-2g-fzw"/>
-                                        <constraint firstAttribute="trailing" secondItem="CYD-7O-Eod" secondAttribute="trailing" id="XF6-1s-nfh"/>
-                                        <constraint firstItem="uHt-BX-Dh3" firstAttribute="top" secondItem="Dvg-Yy-cLd" secondAttribute="top" constant="17" id="YlE-sn-7BD"/>
-                                        <constraint firstAttribute="trailing" secondItem="g7s-io-mXA" secondAttribute="trailing" constant="167" id="aQB-ZR-JAK"/>
-                                        <constraint firstItem="g7s-io-mXA" firstAttribute="top" secondItem="CYD-7O-Eod" secondAttribute="bottom" id="dAX-KW-M0Z"/>
-                                        <constraint firstItem="uHt-BX-Dh3" firstAttribute="leading" secondItem="Dvg-Yy-cLd" secondAttribute="leading" constant="8" id="rpn-g3-3fJ"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="0.92392241379310347" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="favoriteBtn" destination="g7s-io-mXA" id="w0b-LL-wA5"/>
-                                    <outlet property="videoImageView" destination="uHt-BX-Dh3" id="86u-HU-XIc"/>
-                                    <outlet property="videoTitleLabel" destination="CYD-7O-Eod" id="cVK-ng-LB0"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="eUV-ei-I5F" id="Aiq-cI-95T"/>
-                            <outlet property="delegate" destination="eUV-ei-I5F" id="dDE-Ai-D4S"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="xcG-ZT-rCR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="fGn-3l-pco">
-                            <connections>
-                                <action selector="refreshBtnPressed:" destination="eUV-ei-I5F" id="paU-NQ-dvB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableview" destination="AoN-5o-MDU" id="FbY-Y2-maf"/>
-                        <segue destination="Hvj-Qf-uyP" kind="show" identifier="showVideo" id="gVp-r0-4EC"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7XS-0L-R6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3121" y="1665"/>
-        </scene>
         <!--FAVORITES-->
         <scene sceneID="Kan-RG-Icj">
             <objects>
@@ -259,7 +176,7 @@
             <objects>
                 <tableViewController id="Hvj-Qf-uyP" customClass="AnimalVideoTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="vkt-Km-mA2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -410,6 +327,7 @@
                                         <size key="customSize" width="125" height="125"/>
                                         <connections>
                                             <outlet property="thumbnailImage" destination="hcO-ft-zfk" id="Ybg-K5-7el"/>
+                                            <segue destination="Hvj-Qf-uyP" kind="show" identifier="showVideo" id="qUg-OI-Eft"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -471,12 +389,11 @@
         <image name="cat-header" width="2560" height="1440"/>
         <image name="cat-icon" width="25" height="25"/>
         <image name="dog-icon" width="25" height="25"/>
-        <image name="favorites-icon-no-fill.png" width="48" height="48"/>
         <image name="favorites-tab-bar" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XYk-mw-TRU"/>
         <segue reference="D3J-4Y-3ZX"/>
+        <segue reference="qUg-OI-Eft"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
