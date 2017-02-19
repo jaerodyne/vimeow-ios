@@ -31,7 +31,7 @@ class VideoThumbnailCell: UICollectionViewCell {
             sender.setImage(UIImage(named:"favorites-icon-no-fill"), for: .normal)
             pressed = false
         } else {
-            sender.setImage(UIImage(named:"favorites"), for: .normal)
+            sender.setImage(UIImage(named:"favorites-icon"), for: .normal)
             pressed = true
         }
         self.delegate?.buttonTapped(cell: self)

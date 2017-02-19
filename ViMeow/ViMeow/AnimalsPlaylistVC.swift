@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,SearchModelDelegate {
+class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,SearchModelDelegate, VideoThumbnailCellDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -78,7 +78,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
-        print(cell)
+        cell.delegate = self
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let urlString = videosArray[indexPath.row].thumbnailUrl
@@ -98,6 +98,10 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         task.resume()
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //indexPath.row
     }
     
     // MARK: - UICollectionViewDelegate protocol
@@ -127,9 +131,8 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             return
         }
         
-        
         let favoriteVideo = videosArray[indexPath.row] as NSObject
-        if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites")))! {
+        if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites-icon")))! {
             //  Do whatever you need to do with the indexPath
             let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String, "dateAdded": Date()] as [String : Any]
             PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
