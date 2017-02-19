@@ -346,7 +346,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kz6-5J-VlU">
-                        <barButtonItem key="leftBarButtonItem" image="Back_ffffff_32" style="done" id="N64-g7-MEK">
+                        <barButtonItem key="leftBarButtonItem" image="back-btn" style="done" id="N64-g7-MEK">
                             <connections>
                                 <action selector="backBtnPressed:" destination="Hvj-Qf-uyP" id="VCV-vh-WCc"/>
                             </connections>
@@ -417,7 +417,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b5tuncpjw6s-octavio-fossatti" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-mr-Rdg">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat-header" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-mr-Rdg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATS CATS CATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-9R-xab">
@@ -467,8 +467,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back_ffffff_32" width="32" height="32"/>
-        <image name="b5tuncpjw6s-octavio-fossatti" width="2560" height="1440"/>
+        <image name="back-btn" width="32" height="32"/>
+        <image name="cat-header" width="2560" height="1440"/>
         <image name="cat-icon" width="25" height="25"/>
         <image name="dog-icon" width="25" height="25"/>
         <image name="favorites-icon-no-fill.png" width="48" height="48"/>
