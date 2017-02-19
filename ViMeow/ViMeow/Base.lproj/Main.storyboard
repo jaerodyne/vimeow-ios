@@ -259,7 +259,7 @@
             <objects>
                 <tableViewController id="Hvj-Qf-uyP" customClass="AnimalVideoTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="vkt-Km-mA2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -371,11 +371,11 @@
                         <viewControllerLayoutGuide type="bottom" id="nQD-S6-MHk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AY2-t3-e7t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-bX-Go7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="cUS-4Z-RqP">
                                     <size key="itemSize" width="124" height="124"/>
@@ -384,7 +384,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <view key="backgroundView" contentMode="scaleToFill" id="yDU-3I-yEU">
-                                    <rect key="frame" x="0.0" y="-64" width="375" height="618"/>
+                                    <rect key="frame" x="0.0" y="-64" width="375" height="623"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
@@ -454,14 +454,16 @@
                             <constraint firstItem="V9t-bX-Go7" firstAttribute="leading" secondItem="AY2-t3-e7t" secondAttribute="leading" id="prm-7T-bTv"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="vcl-Z1-Wts"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="V9t-bX-Go7" id="aH4-A8-BC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UE-qn-Cab" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3062" y="792"/>
+            <point key="canvasLocation" x="3121" y="978"/>
         </scene>
     </scenes>
     <resources>
@@ -473,8 +475,8 @@
         <image name="favorites-tab-bar" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zmi-U4-TFk"/>
-        <segue reference="gVp-r0-4EC"/>
+        <segue reference="XYk-mw-TRU"/>
+        <segue reference="D3J-4Y-3ZX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
