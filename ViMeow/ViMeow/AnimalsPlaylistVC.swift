@@ -1,92 +1,100 @@
 //
-//  AnimalsPlaylistTableViewController.swift
+//  AnimalPlaylistVC.swift
 //  ViMeow
 //
-//  Created by Jillian Somera on 2/1/17.
+//  Created by Jillian Somera on 2/19/17.
 //  Copyright © 2017 Jillian Somera. All rights reserved.
 //
 
 import UIKit
 
-class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDelegate, UISearchBarDelegate, VideoTableViewCellDelegate {
+class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,SearchModelDelegate {
     
-    @IBOutlet var tableview: UITableView!
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
     var favoriteVideos = [[String: Any]]()
     
-    @IBAction func refreshBtnPressed(_ sender: Any) {
-        let tbc = tabBarController as! CustomTabBarViewController
-        if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats")
-        } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         model.delegate = self
+        model.getVideos(searchText: "Cats")
         
+        //display logo
         let titleView = UIView(frame: CGRect(0, 0, 120, 30))
         let titleImageView = UIImageView(image: UIImage(named: "ViMeow Logo"))
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
         
+        //show appropriate views for tab bar item
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
             model.getVideos(searchText: "Cats")
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
-
     }
     
-    //get rid of whitespace before and after tableview cells
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: -40, right: 0)
+    func dataAreReady() {
+        self.videosArray = model.animalVideos
+        self.collectionView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    // MARK: - UICollectionViewDataSource protocol
+    
+    // tell the collection view how many cells to make
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videosArray.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as! VideoTableViewCell
+    // make a cell for each cell index path
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-            //make custom cell functions accessible
-            cell.delegate = self
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
-            cell.videoTitleLabel.text = videosArray[indexPath.row].title
-            
-            let urlString = videosArray[indexPath.row].thumbnailUrl
-            let url = URL(string: urlString)
-            let session = URLSession.shared
-            let task = session.dataTask(with: url!, completionHandler: { (data, response, error) in
-                DispatchQueue.main.async(execute: {
-                    if error == nil {
-                        if let data = data {
-                            cell.videoImageView.image = UIImage(data: data)
-                        }
-                    } else {
-                        print(error!.localizedDescription)
+        // Use the outlet in our custom class to get a reference to the UILabel in the cell
+        
+        let urlString = videosArray[indexPath.row].thumbnailUrl
+        print(urlString)
+        let url = URL(string: urlString)
+        let session = URLSession.shared
+        let task = session.dataTask(with: url!, completionHandler: { (data, response, error) in
+            DispatchQueue.main.async(execute: {
+                if error == nil {
+                    if let data = data {
+                        cell.thumbnailImage.image = UIImage(data: data)
                     }
-                })
+                } else {
+                    print(error!.localizedDescription)
+                }
             })
-            task.resume()
-            return cell
-        }
-    
-    func buttonTapped(cell: VideoTableViewCell) {
+        })
+        task.resume()
+        return cell
         
-        guard let indexPath = self.tableView.indexPath(for: cell) else {
+    }
+    
+    // MARK: - UICollectionViewDelegate protocol
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerView", for: indexPath)
+        return header
+    }
+    
+    //TODO: Add button to implement favorites and save them to PList
+    /*
+    func buttonTapped(cell: VideoThumbnailCell) {
+        
+        guard let indexPath = self.collectionView.indexPath(for: cell) else {
             // Note, this shouldn't happen - how did the user tap on a button that wasn't on screen?
             return
         }
@@ -110,17 +118,15 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             //remove from plist
             PlistManager.sharedInstance.removeItemForKey(key: videosArray[indexPath.row].id)
         }
-    }    
-    
-    func dataAreReady() {
-        self.videosArray = model.animalVideos
-        self.tableView.reloadData()
     }
     
+     //TODO: Implement segue to tableview 
+ 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(videosArray[indexPath.row].title)
         performSegue(withIdentifier: "showVideo", sender: self)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVideo" {
@@ -131,6 +137,7 @@ class AnimalsPlaylistTableViewController: UITableViewController, SearchModelDele
             vc.vidId = videosArray[indexPath.row].id
         }
     }
+     */
 }
 
 extension CGRect{
@@ -138,14 +145,3 @@ extension CGRect{
         self.init(x:x,y:y,width:width,height:height)
     }
 }
-
-extension Array where Element: Equatable {
-    
-    // Remove first collection element that is equal to the given `object`:
-    mutating func remove(object: Element) {
-        if let index = index(of: object) {
-            remove(at: index)
-        }
-    }
-}
-
