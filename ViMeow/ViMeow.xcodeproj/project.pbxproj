@@ -8,30 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		19947658A25C25DF16DF68E0 /* Pods_ViMeow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */; };
+		A51876811E51992E0018740B /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876801E51992E0018740B /* PlistManager.swift */; };
+		A54A40351E515620004A2096 /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54A40341E515620004A2096 /* Favorites.plist */; };
+		A566DEC31E596CCF002AB0AC /* AnimalsPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566DEC21E596CCF002AB0AC /* AnimalsPlaylistVC.swift */; };
+		A566DEC51E596D34002AB0AC /* VideoThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566DEC41E596D34002AB0AC /* VideoThumbnailCell.swift */; };
+		A566DEC71E597050002AB0AC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566DEC61E597050002AB0AC /* HeaderCollectionReusableView.swift */; };
+		A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */; };
+		A570589B1E44534000889F37 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570589A1E44534000889F37 /* CustomTabBarViewController.swift */; };
+		A583EBC21E4D9318001C0AC0 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583EBC11E4D9318001C0AC0 /* FavoritesTableViewController.swift */; };
 		A58550331DD83472006A7210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550321DD83472006A7210 /* AppDelegate.swift */; };
-		A58550351DD83472006A7210 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58550341DD83472006A7210 /* MainVC.swift */; };
 		A58550381DD83472006A7210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58550361DD83472006A7210 /* Main.storyboard */; };
 		A585503A1DD83472006A7210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58550391DD83472006A7210 /* Assets.xcassets */; };
 		A585503D1DD83472006A7210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A585503B1DD83472006A7210 /* LaunchScreen.storyboard */; };
-		A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */; };
-		A5F3BE2A1DD83C9A0079B9FD /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */; };
-		A5F3BE2C1DD842400079B9FD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE2B1DD842400079B9FD /* Video.swift */; };
-		A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */; };
+		A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BBA1E42D26A00195597 /* AnimalModel.swift */; };
+		A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C89BBE1E42D33D00195597 /* Animal.swift */; };
+		A5CCFE2C1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CCFE2B1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift */; };
+		A5F3FA8E1E525CA200C02F93 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3FA8D1E525CA200C02F93 /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09B6BC176E9816713D94A5C5 /* Pods_ViMeow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViMeow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51876801E51992E0018740B /* PlistManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		A54A40341E515620004A2096 /* Favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Favorites.plist; sourceTree = "<group>"; };
+		A566DEC21E596CCF002AB0AC /* AnimalsPlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsPlaylistVC.swift; sourceTree = "<group>"; };
+		A566DEC41E596D34002AB0AC /* VideoThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoThumbnailCell.swift; sourceTree = "<group>"; };
+		A566DEC61E597050002AB0AC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalVideoTableViewController.swift; sourceTree = "<group>"; };
+		A570589A1E44534000889F37 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		A583EBC11E4D9318001C0AC0 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		A585502F1DD83472006A7210 /* ViMeow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViMeow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58550321DD83472006A7210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A58550341DD83472006A7210 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A58550371DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A58550391DD83472006A7210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A585503C1DD83472006A7210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A585503E1DD83472006A7210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlaylistVC.swift; sourceTree = "<group>"; };
-		A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
-		A5F3BE2B1DD842400079B9FD /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		A5C89BBA1E42D26A00195597 /* AnimalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		A5C89BBE1E42D33D00195597 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		A5CCFE2B1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		A5F3FA8D1E525CA200C02F93 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.debug.xcconfig"; sourceTree = "<group>"; };
 		F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViMeow.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViMeow/Pods-ViMeow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,17 +101,48 @@
 			isa = PBXGroup;
 			children = (
 				A58550321DD83472006A7210 /* AppDelegate.swift */,
-				A58550341DD83472006A7210 /* MainVC.swift */,
-				A5F3BE271DD83C760079B9FD /* VideoPlaylistVC.swift */,
-				A5F3BE2B1DD842400079B9FD /* Video.swift */,
-				A5F3BE291DD83C9A0079B9FD /* VideoVC.swift */,
 				A58550361DD83472006A7210 /* Main.storyboard */,
+				A5C89BBD1E42D27400195597 /* Models */,
+				A5C89BB91E42D25100195597 /* Controllers */,
 				A58550391DD83472006A7210 /* Assets.xcassets */,
 				A585503B1DD83472006A7210 /* LaunchScreen.storyboard */,
 				A585503E1DD83472006A7210 /* Info.plist */,
-				A5F3BE2F1DD8504C0079B9FD /* VideoCell.swift */,
+				A54A40341E515620004A2096 /* Favorites.plist */,
+				A51876801E51992E0018740B /* PlistManager.swift */,
 			);
 			path = ViMeow;
+			sourceTree = "<group>";
+		};
+		A5C89BB91E42D25100195597 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5C89BC21E42DAEB00195597 /* Cells */,
+				A566DEC21E596CCF002AB0AC /* AnimalsPlaylistVC.swift */,
+				A566DEC61E597050002AB0AC /* HeaderCollectionReusableView.swift */,
+				A57058981E44446C00889F37 /* AnimalVideoTableViewController.swift */,
+				A570589A1E44534000889F37 /* CustomTabBarViewController.swift */,
+				A583EBC11E4D9318001C0AC0 /* FavoritesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A5C89BBD1E42D27400195597 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5C89BBA1E42D26A00195597 /* AnimalModel.swift */,
+				A5C89BBE1E42D33D00195597 /* Animal.swift */,
+				A5F3FA8D1E525CA200C02F93 /* Favorite.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A5C89BC21E42DAEB00195597 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A5CCFE2B1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift */,
+				A566DEC41E596D34002AB0AC /* VideoThumbnailCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54A40351E515620004A2096 /* Favorites.plist in Resources */,
 				A585503D1DD83472006A7210 /* LaunchScreen.storyboard in Resources */,
 				A585503A1DD83472006A7210 /* Assets.xcassets in Resources */,
 				A58550381DD83472006A7210 /* Main.storyboard in Resources */,
@@ -224,12 +270,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F3BE2A1DD83C9A0079B9FD /* VideoVC.swift in Sources */,
-				A58550351DD83472006A7210 /* MainVC.swift in Sources */,
+				A566DEC71E597050002AB0AC /* HeaderCollectionReusableView.swift in Sources */,
+				A51876811E51992E0018740B /* PlistManager.swift in Sources */,
+				A57058991E44446C00889F37 /* AnimalVideoTableViewController.swift in Sources */,
 				A58550331DD83472006A7210 /* AppDelegate.swift in Sources */,
-				A5F3BE281DD83C760079B9FD /* VideoPlaylistVC.swift in Sources */,
-				A5F3BE2C1DD842400079B9FD /* Video.swift in Sources */,
-				A5F3BE301DD8504C0079B9FD /* VideoCell.swift in Sources */,
+				A583EBC21E4D9318001C0AC0 /* FavoritesTableViewController.swift in Sources */,
+				A5CCFE2C1E4F8CF4002EE2A6 /* FavoriteTableViewCell.swift in Sources */,
+				A566DEC31E596CCF002AB0AC /* AnimalsPlaylistVC.swift in Sources */,
+				A566DEC51E596D34002AB0AC /* VideoThumbnailCell.swift in Sources */,
+				A5F3FA8E1E525CA200C02F93 /* Favorite.swift in Sources */,
+				A5C89BBB1E42D26A00195597 /* AnimalModel.swift in Sources */,
+				A570589B1E44534000889F37 /* CustomTabBarViewController.swift in Sources */,
+				A5C89BBF1E42D33D00195597 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +325,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -295,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -323,6 +376,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -352,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE67BB12C35DEB78870AFB5C /* Pods-ViMeow.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6BV98965TL;
@@ -367,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0665A162578901CF4440ABE /* Pods-ViMeow.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6BV98965TL;
