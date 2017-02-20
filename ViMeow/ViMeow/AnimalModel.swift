@@ -35,7 +35,7 @@ class AnimalModel: NSObject {
             self.nextPageToken = self.myDefaults.string(forKey: currentPageToken)!
         }
         
-        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "6", "pageToken": nextPageToken], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "18", "pageToken": nextPageToken], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
             if let jsonResult = response.result.value as? NSDictionary  {
                 

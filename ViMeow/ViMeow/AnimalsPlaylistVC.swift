@@ -79,6 +79,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
         cell.delegate = self
+        //cell.favoriteBtn.tag = indexPath.row
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let urlString = videosArray[indexPath.row].thumbnailUrl
