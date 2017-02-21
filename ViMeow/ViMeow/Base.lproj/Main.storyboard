@@ -150,7 +150,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-yh-tS4">
-                                            <rect key="frame" x="8" y="0.0" width="140" height="106"/>
+                                            <rect key="frame" x="8" y="4" width="106" height="106"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6b1-Vx-Lt8">
                                             <rect key="frame" x="156" y="0.0" width="211" height="106"/>
@@ -161,15 +161,20 @@
                                             <color key="textColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-button" translatesAutoresizingMaskIntoConstraints="NO" id="gRq-fQ-3CO">
+                                            <rect key="frame" x="48" y="41" width="32" height="32"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="6b1-Vx-Lt8" firstAttribute="top" secondItem="3Ys-tt-x6W" secondAttribute="top" id="1bf-Hf-fjW"/>
-                                        <constraint firstItem="c0B-yh-tS4" firstAttribute="top" secondItem="3Ys-tt-x6W" secondAttribute="top" id="PEP-IT-I4G"/>
+                                        <constraint firstItem="gRq-fQ-3CO" firstAttribute="centerY" secondItem="c0B-yh-tS4" secondAttribute="centerY" id="NAY-0z-1FZ"/>
+                                        <constraint firstItem="c0B-yh-tS4" firstAttribute="top" secondItem="3Ys-tt-x6W" secondAttribute="top" constant="4" id="PEP-IT-I4G"/>
                                         <constraint firstAttribute="trailing" secondItem="6b1-Vx-Lt8" secondAttribute="trailing" constant="8" id="TZe-cE-Y37"/>
-                                        <constraint firstAttribute="bottom" secondItem="c0B-yh-tS4" secondAttribute="bottom" constant="8" id="VXY-gB-ssq"/>
-                                        <constraint firstItem="6b1-Vx-Lt8" firstAttribute="leading" secondItem="c0B-yh-tS4" secondAttribute="trailing" constant="8" id="bWs-4d-mhu"/>
+                                        <constraint firstAttribute="bottom" secondItem="c0B-yh-tS4" secondAttribute="bottom" constant="4" id="VXY-gB-ssq"/>
+                                        <constraint firstItem="6b1-Vx-Lt8" firstAttribute="leading" secondItem="c0B-yh-tS4" secondAttribute="trailing" constant="42" id="bWs-4d-mhu"/>
                                         <constraint firstItem="c0B-yh-tS4" firstAttribute="leading" secondItem="3Ys-tt-x6W" secondAttribute="leading" constant="8" id="gJJ-ro-fmk"/>
                                         <constraint firstAttribute="bottom" secondItem="6b1-Vx-Lt8" secondAttribute="bottom" constant="8" id="laY-NC-NOm"/>
+                                        <constraint firstItem="gRq-fQ-3CO" firstAttribute="centerX" secondItem="c0B-yh-tS4" secondAttribute="centerX" constant="3" id="si2-Rq-ryq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
@@ -439,6 +444,7 @@
         <image name="dog-icon" width="25" height="25"/>
         <image name="favorites-icon-no-fill" width="48" height="48"/>
         <image name="favorites-tab-bar" width="32" height="32"/>
+        <image name="play-button" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XYk-mw-TRU"/>
