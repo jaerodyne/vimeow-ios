@@ -296,7 +296,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="cUS-4Z-RqP">
                                     <size key="itemSize" width="124" height="124"/>
-                                    <size key="headerReferenceSize" width="50" height="300"/>
+                                    <size key="headerReferenceSize" width="50" height="200"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
@@ -307,7 +307,7 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="PSe-Kz-Kr2" customClass="VideoThumbnailCell" customModule="ViMeow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="125" height="125"/>
+                                        <rect key="frame" x="0.0" y="200" width="125" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
@@ -349,27 +349,28 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="28Y-X4-RPi" customClass="HeaderCollectionReusableView" customModule="ViMeow" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat-header" translatesAutoresizingMaskIntoConstraints="NO" id="UiN-mr-Rdg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                            <rect key="frame" x="0.0" y="-5" width="375" height="204"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATS CATS CATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-9R-xab">
-                                            <rect key="frame" x="52" y="249" width="271" height="47"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-9R-xab">
+                                            <rect key="frame" x="274" y="137" width="93" height="63"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.045612980769999999" green="0.045612980769999999" blue="0.045612980769999999" alpha="0.92392241379999995" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="m4Q-9R-xab" firstAttribute="top" secondItem="UiN-mr-Rdg" secondAttribute="bottom" constant="8" id="CrY-wx-8TU"/>
-                                        <constraint firstAttribute="bottom" secondItem="UiN-mr-Rdg" secondAttribute="bottom" constant="59" id="a8T-Fo-jM1"/>
-                                        <constraint firstItem="UiN-mr-Rdg" firstAttribute="leading" secondItem="28Y-X4-RPi" secondAttribute="leading" id="gHY-dl-H3D"/>
-                                        <constraint firstItem="m4Q-9R-xab" firstAttribute="centerX" secondItem="UiN-mr-Rdg" secondAttribute="centerX" id="lAR-Oz-69c"/>
-                                        <constraint firstItem="UiN-mr-Rdg" firstAttribute="top" secondItem="28Y-X4-RPi" secondAttribute="top" id="oqy-yZ-uCV"/>
-                                        <constraint firstAttribute="trailing" secondItem="UiN-mr-Rdg" secondAttribute="trailing" id="vyY-59-9ju"/>
+                                        <constraint firstItem="m4Q-9R-xab" firstAttribute="top" secondItem="28Y-X4-RPi" secondAttribute="top" constant="137" id="6nJ-BT-jpq"/>
+                                        <constraint firstAttribute="bottom" secondItem="UiN-mr-Rdg" secondAttribute="bottom" constant="1" id="CQB-zJ-JmX"/>
+                                        <constraint firstAttribute="bottom" secondItem="m4Q-9R-xab" secondAttribute="bottom" id="HEI-tW-3aW"/>
+                                        <constraint firstAttribute="trailing" secondItem="UiN-mr-Rdg" secondAttribute="trailing" id="NQ5-1O-7EH"/>
+                                        <constraint firstItem="m4Q-9R-xab" firstAttribute="leading" secondItem="28Y-X4-RPi" secondAttribute="leading" constant="274" id="V96-q4-kcD"/>
+                                        <constraint firstItem="UiN-mr-Rdg" firstAttribute="leading" secondItem="28Y-X4-RPi" secondAttribute="leading" id="Xpc-u0-mbh"/>
+                                        <constraint firstAttribute="trailing" secondItem="m4Q-9R-xab" secondAttribute="trailing" constant="8" id="cT6-3r-ViQ"/>
+                                        <constraint firstItem="UiN-mr-Rdg" firstAttribute="top" secondItem="28Y-X4-RPi" secondAttribute="top" constant="-5" id="za7-Y9-LtH"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="imageView" destination="UiN-mr-Rdg" id="nmX-ek-xAa"/>

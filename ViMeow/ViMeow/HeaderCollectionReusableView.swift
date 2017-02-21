@@ -14,6 +14,6 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var imageView: UIImageView!
     
     func viewDidLayoutSubviews() {
-        tabTitle.font = tabTitle.font.withSize(46)
+        tabTitle.font = tabTitle.font.withSize(32)
     }
 }
