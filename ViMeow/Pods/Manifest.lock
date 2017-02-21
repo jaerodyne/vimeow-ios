@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.0.1)
+  - ESPullToRefresh (2.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - ESPullToRefresh
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
 
-PODFILE CHECKSUM: b41cf34e0960292b5d70b3b7aa82c5111a938994
+PODFILE CHECKSUM: e2bc57b2722c8a1f93c11474b2efad399a753425
 
 COCOAPODS: 1.1.1

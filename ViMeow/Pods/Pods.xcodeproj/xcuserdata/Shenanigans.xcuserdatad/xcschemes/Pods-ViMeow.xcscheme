@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A989FD48C0CAB33B3F670C217F82502"
+               BlueprintIdentifier = "337A4824A623AC7B21420C2D7DFEB4A2"
                BuildableName = "Pods_ViMeow.framework"
                BlueprintName = "Pods-ViMeow"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A989FD48C0CAB33B3F670C217F82502"
+            BlueprintIdentifier = "337A4824A623AC7B21420C2D7DFEB4A2"
             BuildableName = "Pods_ViMeow.framework"
             BlueprintName = "Pods-ViMeow"
             ReferencedContainer = "container:Pods.xcodeproj">

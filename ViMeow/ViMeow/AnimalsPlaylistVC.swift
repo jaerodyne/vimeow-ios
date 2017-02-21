@@ -7,25 +7,17 @@
 //
 
 import UIKit
+import ESPullToRefresh
 
 class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,SearchModelDelegate, VideoThumbnailCellDelegate {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     var videosArray = [Animal]()
     var model = AnimalModel()
     var searchController: UISearchController!
     var favoriteVideos = [[String: Any]]()
-    
-    @IBAction func refreshBtnPressed(_ sender: Any) {
-        let tbc = tabBarController as! CustomTabBarViewController
-        if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats")
-        } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs")
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         model.delegate = self
@@ -45,19 +37,24 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
-        
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(AnimalPlaylistVC.buttonMethod))
-        navigationItem.leftBarButtonItem = refreshButton
     }
     
-    func buttonMethod() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //implement pull to refresh
         let tbc = tabBarController as! CustomTabBarViewController
-        if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats")
-        } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs")
+        collectionView.es_addPullToRefresh {
+            if tbc.selectedIndex == 0 {
+                self.model.getVideos(searchText: "Cats")
+            } else if tbc.selectedIndex == 1 {
+                self.model.getVideos(searchText: "Dogs")
+            }
+            self.collectionView.es_stopPullToRefresh()
+            //delay time to make animation smoother
+            usleep(300000)
+            self.collectionView.reloadData()
         }
-
     }
     
     func dataAreReady() {
@@ -99,10 +96,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         task.resume()
         return cell
         
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //indexPath.row
     }
     
     // MARK: - UICollectionViewDelegate protocol
