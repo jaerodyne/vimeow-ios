@@ -12,6 +12,8 @@ class FavoritesTableViewController: UITableViewController {
     
     var favoriteVideos = [Favorite]()
     
+    @IBOutlet weak var deleteBtn: UIBarButtonItem!
+    
     @IBAction func deleteBtnPressed(_ sender: Any) {
         self.favoriteVideos.removeAll()
         PlistManager.sharedInstance.removeAllItemsFromPlist()

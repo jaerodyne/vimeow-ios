@@ -197,6 +197,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteBtn" destination="rH2-Tz-uvr" id="PXI-Ay-vfj"/>
                         <segue destination="Hvj-Qf-uyP" kind="show" identifier="showFavorite" id="XYk-mw-TRU"/>
                     </connections>
                 </tableViewController>
@@ -209,7 +210,7 @@
             <objects>
                 <tableViewController id="Hvj-Qf-uyP" customClass="AnimalVideoTableViewController" customModule="ViMeow" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="vkt-Km-mA2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -452,8 +453,8 @@
         <image name="play-button" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XYk-mw-TRU"/>
         <segue reference="D3J-4Y-3ZX"/>
-        <segue reference="qUg-OI-Eft"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
