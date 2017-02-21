@@ -37,10 +37,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
         }
-        
-        //programatically create refresh button
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(AnimalPlaylistVC.buttonMethod))
-        navigationItem.leftBarButtonItem = refreshButton
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,16 +55,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             usleep(300000)
             self.collectionView.reloadData()
         }
-    }
-    
-    func buttonMethod() {
-        let tbc = tabBarController as! CustomTabBarViewController
-        if tbc.selectedIndex == 0 {
-            model.getVideos(searchText: "Cats")
-        } else if tbc.selectedIndex == 1 {
-            model.getVideos(searchText: "Dogs")
-        }
-
     }
     
     func dataAreReady() {
