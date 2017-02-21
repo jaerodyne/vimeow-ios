@@ -12,5 +12,6 @@ ViMeow is an personal project focused on giving people a daily moment of happine
 
 ##Technologies
 API: Youtube
+Cocoapods: Alamofire, ESPullToRefresh
 
 Technology Stack: Swift
