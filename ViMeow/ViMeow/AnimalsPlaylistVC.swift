@@ -75,8 +75,8 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for: indexPath as IndexPath) as! VideoThumbnailCell
         
+        // set delegate to call custom method in buttonTapped()
         cell.delegate = self
-        //cell.favoriteBtn.tag = indexPath.row
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let urlString = videosArray[indexPath.row].thumbnailUrl
@@ -118,10 +118,10 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
             header.imageView.image = UIImage(named: "cat-header")
-            header.tabTitle.text = "CATS CATS CATS"
+            header.tabTitle.text = "CATS"
         } else if tbc.selectedIndex == 1 {
             header.imageView.image = UIImage(named: "dog-header")
-            header.tabTitle.text = "DOGS DOGS DOGS"
+            header.tabTitle.text = "DOGS"
         }
         return header
     }
