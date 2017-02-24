@@ -16,7 +16,6 @@ protocol SearchModelDelegate {
 
 class AnimalModel: NSObject {
     
-    private var channelId: String = "UCBJycsmduvYEL83R_U4JriQ"
     private var API_KEY = "AIzaSyAJ7h6mfpzCkaomGO3BTevEgPXCcRtzwJ0"
     private var url = "https://www.googleapis.com/youtube/v3/search"
     private var nextPageToken = ""
@@ -49,7 +48,6 @@ class AnimalModel: NSObject {
                     
                     videoObj.title = (video as! NSObject).value(forKeyPath: "snippet.title") as! String
                     videoObj._description = (video as! NSObject).value(forKeyPath: "snippet.description") as! String
-                    
                     if (video as! NSObject).value(forKeyPath: "id.videoId") != nil {
                         videoObj.id = (video as! NSObject).value(forKeyPath: "id.videoId") as! String
                     }
