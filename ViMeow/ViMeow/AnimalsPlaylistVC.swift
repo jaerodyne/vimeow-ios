@@ -108,6 +108,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
                 vc.vidId = videosArray[(indexPath?.row)!].id
                 vc.vidTitle = videosArray[(indexPath?.row)!].title
                 vc.vidDescription = videosArray[(indexPath?.row)!]._description
+                print("this is the description: \(vc.vidDescription)")
             }
         }
     }
