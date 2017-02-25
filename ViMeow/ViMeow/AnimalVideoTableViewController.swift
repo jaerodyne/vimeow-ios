@@ -65,6 +65,8 @@ class AnimalVideoTableViewController: UITableViewController {
         
     }
     
+    //TODO: Refactor logic into model so it isn't in the controller
+    //Youtube's API has a limitation where running a search doesn't give you the full description and instead returns a truncated string. You have to make another request once you have the video's id, pulling from the videos route in the Youtube API in order to get the full description. WHY
     func getLongDescription() {
         Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "id": vidId], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
@@ -77,5 +79,4 @@ class AnimalVideoTableViewController: UITableViewController {
             }
         }
     }
-
 }
