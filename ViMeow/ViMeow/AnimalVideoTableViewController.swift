@@ -55,7 +55,7 @@ class AnimalVideoTableViewController: UITableViewController {
 
             webView.scrollView.isScrollEnabled = false
 
-            let embeddedHTML = "<html><head><style type=\"text/css\">body {background-color: transparent; color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"" + String(describing: height) + "\"width=\"" + String(describing: width) + "\" src=\"http://www.youtube.com/embed/" + vidId + "?showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
+            let embeddedHTML = "<html><head><style type=\"text/css\">body {background-color: transparent; color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"" + String(describing: height) + "\"width=\"" + String(describing: width) + "\" src=\"http://www.youtube.com/embed/" + vidId + "?autoplay=1&showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
             
             // Load your webView with the HTML we just set up
             webView.loadHTMLString(embeddedHTML, baseURL: Bundle.main.bundleURL)
