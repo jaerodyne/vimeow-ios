@@ -15,4 +15,6 @@ API: Youtube
 
 Cocoapods: Alamofire, ESPullToRefresh
 
+Other third-party libraries: PListManager
+
 Technology Stack: Swift
