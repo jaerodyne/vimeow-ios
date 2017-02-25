@@ -55,7 +55,9 @@ class AnimalVideoTableViewController: UITableViewController {
 
             webView.scrollView.isScrollEnabled = false
 
-            let embeddedHTML = "<html><head><style type=\"text/css\">body {background-color: transparent; color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"" + String(describing: height) + "\"width=\"" + String(describing: width) + "\" src=\"http://www.youtube.com/embed/" + vidId + "?autoplay=1&showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
+             let embeddedHTML = "<html><body style='margin:0px;padding:0px;'><script type='text/javascript' src='http://www.youtube.com/iframe_api'></script><script type='text/javascript'>function onYouTubeIframeAPIReady(){ytplayer=new YT.Player('playerId',{events:{onReady:onPlayerReady}})}function onPlayerReady(a){a.target.playVideo();}</script><iframe id='playerId' type='text/html' width='\(width)' height='\(height)' src='http://www.youtube.com/embed/\(vidId)?enablejsapi=1&rel=0&playsinline=1&autoplay=1' frameborder='0'></body></html>"
+            
+            //let embeddedHTML = "<html><head><style type=\"text/css\">body {background-color: transparent; color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"" + String(describing: height) + "\"width=\"" + String(describing: width) + "\" src=\"http://www.youtube.com/embed/" + vidId + "?autoplay=1&showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
             
             // Load your webView with the HTML we just set up
             webView.loadHTMLString(embeddedHTML, baseURL: Bundle.main.bundleURL)
