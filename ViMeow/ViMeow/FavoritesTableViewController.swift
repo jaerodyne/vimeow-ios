@@ -86,7 +86,7 @@ class FavoritesTableViewController: UITableViewController {
         if self.favoriteVideos.count == 0{
             let emptyLabel = UILabel(frame: CGRect(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
             emptyLabel.text = "No Favorites :("
-            emptyLabel.font = UIFont(name: "AvenirNext", size: 12)
+            emptyLabel.font = UIFont(name: "Avenir Next", size: 18)
             emptyLabel.textAlignment = NSTextAlignment.center
             self.tableView.backgroundView = emptyLabel
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
