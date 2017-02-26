@@ -90,17 +90,13 @@ class FavoritesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
-    func tableView(tableView: UITableView, commitEditingStyle  editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath:   NSIndexPath) {
-        
-    }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // delete data and row
+            // delete data and row from tableview and plist
             favoriteVideos.remove(at: indexPath.row)
+            PlistManager.sharedInstance.removeItemForKey(key: favoriteVideos[indexPath.row].id)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
         }
     }
 
