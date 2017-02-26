@@ -196,9 +196,11 @@
                                 <action selector="deleteBtnPressed:" destination="Yy5-hG-YPn" id="KNX-yW-gII"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="b08-9O-uet"/>
                     </navigationItem>
                     <connections>
                         <outlet property="deleteBtn" destination="rH2-Tz-uvr" id="PXI-Ay-vfj"/>
+                        <outlet property="tableView" destination="2bg-sY-xVP" id="dxE-75-zO3"/>
                         <segue destination="Hvj-Qf-uyP" kind="show" identifier="showFavorite" id="XYk-mw-TRU"/>
                     </connections>
                 </tableViewController>
