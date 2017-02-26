@@ -57,7 +57,7 @@ class AnimalModel: NSObject {
                     if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") != nil {
                         videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") as! String
                     } else if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") != nil {
-                        videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") as! String
+                        videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") as! String 
                     } else if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.default.url") != nil {
                         videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.default.url") as! String
                     }

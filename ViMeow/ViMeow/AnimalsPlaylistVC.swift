@@ -17,11 +17,11 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     var model = AnimalModel()
     var searchController: UISearchController!
     var favoriteVideos = [[String: Any]]()
+    var favButtons = [VideoThumbnailCell]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         model.delegate = self
-        model.getVideos(searchText: "Cats")
         
         //display logo
         let titleView = UIView(frame: CGRect(0, 0, 120, 30))
@@ -45,6 +45,11 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         //implement pull to refresh
         let tbc = tabBarController as! CustomTabBarViewController
         collectionView.es_addPullToRefresh {
+            //set favorite button images back to no fill
+            for cell in self.favButtons {
+                cell.favoriteBtn.setImage(UIImage(named:"favorites-icon-no-fill"), for: .normal)
+            }
+            self.favButtons = []
             if tbc.selectedIndex == 0 {
                 self.model.getVideos(searchText: "Cats")
             } else if tbc.selectedIndex == 1 {
@@ -63,7 +68,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     // MARK: - UICollectionViewDataSource protocol
-    
+
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videosArray.count
@@ -77,7 +82,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         
         // set delegate to call custom method in buttonTapped()
         cell.delegate = self
-        
+
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         let urlString = videosArray[indexPath.row].thumbnailUrl
         let url = URL(string: urlString)
@@ -107,8 +112,6 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
                 let indexPath = collectionView!.indexPath(for: cell)
                 vc.vidId = videosArray[(indexPath?.row)!].id
                 vc.vidTitle = videosArray[(indexPath?.row)!].title
-                vc.vidDescription = videosArray[(indexPath?.row)!]._description
-                print("this is the description: \(vc.vidDescription)")
             }
         }
     }
@@ -136,6 +139,8 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         
         let favoriteVideo = videosArray[indexPath.row] as NSObject
         if (cell.favoriteBtn.currentImage?.isEqual(UIImage(named:"favorites-icon")))! {
+            //add favorite button to array to keep track of favorites for reset upon pull to refresh
+            favButtons.append(cell)
             //  Do whatever you need to do with the indexPath
             let favoriteVideoDict = ["title": (favoriteVideo).value(forKeyPath: "title") as! String, "description": (favoriteVideo).value(forKeyPath: "_description") as! String, "thumbnailUrl": (favoriteVideo).value(forKeyPath: "thumbnailUrl") as! String, "id": (favoriteVideo).value(forKeyPath: "id") as! String, "dateAdded": Date()] as [String : Any]
             PlistManager.sharedInstance.addNewItemWithKey(key: (favoriteVideo).value(forKeyPath: "id") as! String, value: favoriteVideoDict as AnyObject)
