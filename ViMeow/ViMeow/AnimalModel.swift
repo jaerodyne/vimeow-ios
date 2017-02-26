@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftRandom
 
 //lets LastVideosVC know that all videos have been collected in the array and are ready
 protocol SearchModelDelegate {
@@ -26,15 +27,15 @@ class AnimalModel: NSObject {
     
     var animalVideos = [Animal]()
     var delegate: SearchModelDelegate!
-    
+
     func getVideos(searchText: String) {
-        
+        let randomDate = Randoms.randomDateWithinDaysBeforeToday(3650).iso8601
         //get current page token
         if self.myDefaults.string(forKey: currentPageToken) != nil {
             self.nextPageToken = self.myDefaults.string(forKey: currentPageToken)!
         }
         
-        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "18", "pageToken": nextPageToken], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "q": searchText, "type": "video", "maxResults": "18", "publishedBefore": randomDate], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             
             if let jsonResult = response.result.value as? NSDictionary  {
                 
@@ -56,7 +57,7 @@ class AnimalModel: NSObject {
                     if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") != nil {
                         videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.high.url") as! String
                     } else if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") != nil {
-                        videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") as! String
+                        videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.medium.url") as! String 
                     } else if (video as! NSObject).value(forKeyPath: "snippet.thumbnails.default.url") != nil {
                         videoObj.thumbnailUrl = (video as! NSObject).value(forKeyPath: "snippet.thumbnails.default.url") as! String
                     }
@@ -70,5 +71,27 @@ class AnimalModel: NSObject {
                 }
             }
         }
+    }
+}
+
+//http://stackoverflow.com/questions/28016578/swift-how-to-create-a-date-time-stamp-and-format-as-iso-8601-rfc-3339-utc-tim
+
+extension Date {
+    static let iso8601Formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+        return formatter
+    }()
+    var iso8601: String {
+        return Date.iso8601Formatter.string(from: self)
+    }
+}
+
+extension String {
+    var dateFromISO8601: Date? {
+        return Date.iso8601Formatter.date(from: self)
     }
 }

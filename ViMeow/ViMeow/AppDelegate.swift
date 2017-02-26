@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().backgroundColor = UIColor.black
+        if let font = UIFont(name: "AvenirNext-DemiBold", size: 18) {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font,NSForegroundColorAttributeName:UIColor.init(colorLiteralRed: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)], for: UIControlState.normal)
+            
+        }
 
         return true
     }

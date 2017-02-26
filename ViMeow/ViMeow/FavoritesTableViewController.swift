@@ -42,7 +42,7 @@ class FavoritesTableViewController: UITableViewController {
             let tempArr = dict
             
             //iterate through dictionary to get values
-            for (key,value) in tempArr! {
+            for (_,value) in tempArr! {
                 let favorite = Favorite()
                 favorite.title = (value as! NSObject).value(forKeyPath: "title") as! String
                 favorite._description = (value as! NSObject).value(forKeyPath: "description") as! String
@@ -68,6 +68,10 @@ class FavoritesTableViewController: UITableViewController {
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
+        
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,16 +80,32 @@ class FavoritesTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if self.favoriteVideos.count == 0{
+            let emptyLabel = UILabel(frame: CGRect(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+            emptyLabel.text = "No Favorites :("
+            emptyLabel.font = UIFont(name: "Avenir Next", size: 18)
+            emptyLabel.textAlignment = NSTextAlignment.center
+            self.tableView.backgroundView = emptyLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            return 0
+        }
         return favoriteVideos.count
+    }
+
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        PlistManager.sharedInstance.removeItemForKey(key: favoriteVideos[indexPath.row].id)
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            // delete data and row from tableview and plist
+            favoriteVideos.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
