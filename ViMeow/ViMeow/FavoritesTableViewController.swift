@@ -42,7 +42,7 @@ class FavoritesTableViewController: UITableViewController {
             let tempArr = dict
             
             //iterate through dictionary to get values
-            for (key,value) in tempArr! {
+            for (_,value) in tempArr! {
                 let favorite = Favorite()
                 favorite.title = (value as! NSObject).value(forKeyPath: "title") as! String
                 favorite._description = (value as! NSObject).value(forKeyPath: "description") as! String
@@ -68,6 +68,7 @@ class FavoritesTableViewController: UITableViewController {
         titleImageView.frame = CGRect(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
