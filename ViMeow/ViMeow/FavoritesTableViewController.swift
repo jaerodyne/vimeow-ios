@@ -83,19 +83,27 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if self.favoriteVideos.count == 0{
+            let emptyLabel = UILabel(frame: CGRect(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+            emptyLabel.text = "No Favorites :("
+            emptyLabel.font = UIFont(name: "AvenirNext", size: 12)
+            emptyLabel.textAlignment = NSTextAlignment.center
+            self.tableView.backgroundView = emptyLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+            return 0
+        }
         return favoriteVideos.count
     }
-    
+
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        PlistManager.sharedInstance.removeItemForKey(key: favoriteVideos[indexPath.row].id)
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             // delete data and row from tableview and plist
             favoriteVideos.remove(at: indexPath.row)
-            PlistManager.sharedInstance.removeItemForKey(key: favoriteVideos[indexPath.row].id)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
