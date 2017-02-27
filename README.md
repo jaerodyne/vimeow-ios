@@ -13,7 +13,7 @@ ViMeow is an personal project focused on giving people a daily moment of happine
 ##Technologies
 API: Youtube
 
-Cocoapods: Alamofire, ESPullToRefresh
+Cocoapods: Alamofire, ESPullToRefresh, SwiftRandom
 
 Other third-party libraries: PListManager
 
