@@ -2,17 +2,20 @@ PODS:
   - Alamofire (4.0.1)
   - ESPullToRefresh (2.6)
   - SwiftRandom (1.0.0)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - ESPullToRefresh
   - SwiftRandom
+  - YouTubePlayer (~> 0.4)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 075b241aaac2c0adc4df2e75fd81437b20c84f29
+PODFILE CHECKSUM: 37f9b97cb77ba6edb97f85bb2dbe77f67e629ae9
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

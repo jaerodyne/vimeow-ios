@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IpZ-uj-Pb2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IpZ-uj-Pb2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,6 +59,7 @@
                     <connections>
                         <segue destination="m8g-2y-3OV" kind="relationship" relationship="viewControllers" id="Kqc-Og-zCx"/>
                         <segue destination="bhX-NN-TFm" kind="relationship" relationship="viewControllers" id="bLG-n4-Dk8"/>
+                        <segue destination="4iX-P6-EID" kind="relationship" relationship="viewControllers" id="UzW-si-AER"/>
                         <segue destination="29I-we-QoH" kind="relationship" relationship="viewControllers" id="1vv-XG-aGY"/>
                     </connections>
                 </tabBarController>
@@ -104,7 +105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ced-f2-sab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="3019"/>
+            <point key="canvasLocation" x="2145" y="3815"/>
         </scene>
         <!--Favorites Table View Controller-->
         <scene sceneID="NqQ-ZI-2rP">
@@ -115,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="CVo-eh-3Yo">
-                            <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal-partay" translatesAutoresizingMaskIntoConstraints="NO" id="KNZ-xG-qRJ">
@@ -203,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgn-42-WBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280.8000000000002" y="2766.5667166416792"/>
+            <point key="canvasLocation" x="3270" y="3457"/>
         </scene>
         <!--Animal Video Table View Controller-->
         <scene sceneID="aLf-Qq-UWb">
@@ -434,7 +435,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UE-qn-Cab" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3120.8000000000002" y="977.36131934032994"/>
+            <point key="canvasLocation" x="3151" y="1539"/>
+        </scene>
+        <!--Random-->
+        <scene sceneID="Ig0-6k-9lo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4iX-P6-EID" userLabel="Random" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="RANDOM" image="random" id="3ep-Mj-Meh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XU1-gt-84o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L9q-NU-Hz7" kind="relationship" relationship="rootViewController" id="toU-da-9DS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVF-EY-gHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="3063"/>
         </scene>
     </scenes>
     <resources>
@@ -446,9 +467,10 @@
         <image name="favorites-icon-no-fill" width="48" height="48"/>
         <image name="favorites-tab-bar" width="32" height="32"/>
         <image name="play-button" width="32" height="32"/>
+        <image name="random" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D3J-4Y-3ZX"/>
+        <segue reference="toU-da-9DS"/>
         <segue reference="qUg-OI-Eft"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

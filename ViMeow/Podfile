@@ -10,4 +10,5 @@ target 'ViMeow' do
   pod 'Alamofire', '~> 4.0'
   pod 'ESPullToRefresh'
   pod 'SwiftRandom'
+  pod 'YouTubePlayer', '~> 0.4'
 end
