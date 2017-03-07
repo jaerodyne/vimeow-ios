@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16F0602FACCC3BDDC9A428441B8CA6E7"
+               BlueprintIdentifier = "1C61E66E977F8FBE82C3D8A56AB69DA6"
                BuildableName = "Pods_ViMeow.framework"
                BlueprintName = "Pods-ViMeow"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16F0602FACCC3BDDC9A428441B8CA6E7"
+            BlueprintIdentifier = "1C61E66E977F8FBE82C3D8A56AB69DA6"
             BuildableName = "Pods_ViMeow.framework"
             BlueprintName = "Pods-ViMeow"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,6 +8,7 @@
 
 import UIKit
 import ESPullToRefresh
+import SwiftRandom
 
 class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,SearchModelDelegate, VideoThumbnailCellDelegate {
 
@@ -18,6 +19,7 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
     var searchController: UISearchController!
     var favoriteVideos = [[String: Any]]()
     var favButtons = [VideoThumbnailCell]()
+    var randomCollection = ["Funny Animals", "Cute Animals", "Cute Baby Animals", "Viral Animal Videos", "Funny Pets"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,9 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
             model.getVideos(searchText: "Cats")
         } else if tbc.selectedIndex == 1 {
             model.getVideos(searchText: "Dogs")
+        } else if tbc.selectedIndex == 2{
+//            get random animal videos
+            model.getVideos(searchText: randomCollection[0..<randomCollection.count].randomItem()!)
         }
     }
     
@@ -54,7 +59,10 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
                 self.model.getVideos(searchText: "Cats")
             } else if tbc.selectedIndex == 1 {
                 self.model.getVideos(searchText: "Dogs")
+            } else if tbc.selectedIndex == 2{
+                self.model.getVideos(searchText: self.randomCollection[0..<self.randomCollection.count].randomItem()!)
             }
+
             self.collectionView.es_stopPullToRefresh()
             //delay time to make animation smoother
             usleep(300000)
@@ -126,7 +134,12 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         } else if tbc.selectedIndex == 1 {
             header.imageView.image = UIImage(named: "dog-header")
             header.tabTitle.text = "DOGS"
+        } else if tbc.selectedIndex == 2{
+    //            get random animal videos
+            header.imageView.image = UIImage(named: "animals")
+            header.tabTitle.text = ""
         }
+
         return header
     }
     
