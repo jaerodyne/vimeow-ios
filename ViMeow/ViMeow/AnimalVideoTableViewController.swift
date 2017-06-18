@@ -18,9 +18,16 @@ class AnimalVideoTableViewController: UITableViewController {
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var videoTitleLabel: UILabel!
     @IBOutlet weak var videoDescription: UITextView!
+    @IBOutlet weak var shareBtn: UIButton!
     
     @IBAction func backBtnPressed(_ sender: Any) {
         self.navigationController!.popViewController(animated: true)
+    }
+    
+    @IBAction func shareBtnPressed(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: ["ZOMG, animals:", "https://www.youtube.com/watch?v=\(vidId)"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     var vidTitle: String!
@@ -37,12 +44,15 @@ class AnimalVideoTableViewController: UITableViewController {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
         
+        videoTitleLabel.text = vidTitle
+
+        shareBtn.layer.cornerRadius = 10
+        
         getLongDescription()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        
-        videoTitleLabel.text = vidTitle
+
         videoDescription.text = vidDescription
         videoDescription.scrollRangeToVisible(NSRange(location: 0, length: 0))
         
@@ -61,12 +71,13 @@ class AnimalVideoTableViewController: UITableViewController {
             //let embeddedHTML = "<html><head><style type=\"text/css\">body {background-color: transparent; color: white;}</style></head><body style=\"margin:0\"><iframe frameBorder=\"0\" height=\"" + String(describing: height) + "\"width=\"" + String(describing: width) + "\" src=\"http://www.youtube.com/embed/" + vidId + "?autoplay=1&showinfo=0&modestbranding=1&frameborder=0&rel=0\"></iframe></body></html>"
             
             // Load your webView with the HTML we just set up
-            webView.loadHTMLString(embeddedHTML, baseURL: Bundle.main.bundleURL)
+//            webView.loadHTMLString(embeddedHTML, baseURL: Bundle.main.bundleURL)
+            webView.loadHTMLString(embeddedHTML, baseURL: URL(string: "http://www.youtube.com"))
+
         }
         
     }
     
-    //TODO: Refactor logic into model so it isn't in the controller
     //Youtube's API has a limitation where running a search doesn't give you the full description and instead returns a truncated string. You have to make another request once you have the video's id, pulling from the videos route in the Youtube API in order to get the full description. WHY
     func getLongDescription() {
         Alamofire.request(url, method: HTTPMethod.get, parameters: ["part": "snippet", "key": API_KEY, "id": vidId], encoding: URLEncoding.default, headers: nil).responseJSON { (response) in

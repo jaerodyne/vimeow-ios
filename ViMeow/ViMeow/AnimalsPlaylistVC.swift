@@ -130,14 +130,11 @@ class AnimalPlaylistVC: UIViewController, UICollectionViewDataSource, UICollecti
         let tbc = tabBarController as! CustomTabBarViewController
         if tbc.selectedIndex == 0 {
             header.imageView.image = UIImage(named: "cat-header")
-            header.tabTitle.text = "CATS"
         } else if tbc.selectedIndex == 1 {
             header.imageView.image = UIImage(named: "dog-header")
-            header.tabTitle.text = "DOGS"
         } else if tbc.selectedIndex == 2{
     //            get random animal videos
             header.imageView.image = UIImage(named: "animals")
-            header.tabTitle.text = ""
         }
 
         return header
